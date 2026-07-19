@@ -421,8 +421,13 @@ a {
 }
 
 .future-item {
-  padding: 1.6rem 0 0;
-  border-top: 1px solid rgba(181, 106, 63, 0.35);
+  padding: 1.6rem 1.4rem 1.7rem;
+  background: #fff;
+  border: 1px solid rgba(17, 17, 17, 0.06);
+  border-radius: 1rem;
+  box-shadow:
+    0 1px 2px rgba(17, 17, 17, 0.03),
+    0 10px 28px rgba(17, 17, 17, 0.06);
 }
 
 .future-label {
@@ -436,7 +441,7 @@ a {
 }
 
 .future-item h3 {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   margin-bottom: 0.85rem;
   line-height: 1.5;
 }
@@ -448,8 +453,10 @@ a {
 
 /* Formula */
 .formula-diagram {
-  margin: 2.25rem 0 1.5rem;
+  margin: 2.25rem auto 1.5rem;
   max-width: 860px;
+  display: flex;
+  justify-content: center;
 }
 
 .formula-grid {
@@ -457,7 +464,10 @@ a {
   grid-template-columns: 92px auto 92px auto 92px;
   column-gap: 0.35rem;
   justify-content: center;
+  justify-items: center;
   align-items: center;
+  width: max-content;
+  margin-inline: auto;
   user-select: none;
 }
 
