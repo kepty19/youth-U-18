@@ -665,10 +665,10 @@ a {
   align-items: center;
   gap: 0.5rem;
   margin: 0.5rem 0 0.25rem 0.25rem;
-  font-family: var(--font-ui);
+  font-family: var(--font-jp);
   font-size: 0.75rem;
-  font-weight: 900;
-  letter-spacing: 0.22em;
+  font-weight: 700;
+  letter-spacing: 0.18em;
   color: var(--accent);
 }
 
@@ -716,7 +716,7 @@ a {
   position: sticky;
   left: 0;
   z-index: 20;
-  background: var(--bg-cream);
+  background: var(--bg-warm);
   padding-right: 0.5rem;
 }
 
@@ -742,9 +742,9 @@ a {
 .compare-pill-head {
   background: linear-gradient(180deg, #c4895f, #b56a3f);
   color: #fff;
-  font-family: var(--font-ui);
-  font-weight: 900;
-  font-size: 0.72rem;
+  font-family: var(--font-jp);
+  font-weight: 700;
+  font-size: 0.78rem;
   letter-spacing: 0.02em;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
 }
@@ -758,9 +758,9 @@ a {
 .compare-cell {
   background: #fff;
   border: 1px solid rgba(229, 229, 229, 0.85);
-  font-family: var(--font-ui);
-  font-size: 0.78rem;
-  font-weight: 800;
+  font-family: var(--font-jp);
+  font-size: 0.84rem;
+  font-weight: 600;
   color: #1a1a1a;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
 }
@@ -810,9 +810,9 @@ a {
 .compare-footnote {
   margin-top: 0.35rem;
   margin-bottom: 1.75rem;
-  font-family: var(--font-ui);
-  font-size: 0.75rem;
-  font-weight: 700;
+  font-family: var(--font-jp);
+  font-size: 0.8rem;
+  font-weight: 500;
   color: #737373;
   line-height: 1.6;
 }
@@ -838,11 +838,11 @@ a {
 
   .compare-pill-label,
   .compare-pill-head {
-    font-size: 0.8rem;
+    font-size: 0.88rem;
   }
 
   .compare-cell {
-    font-size: 0.875rem;
+    font-size: 0.92rem;
   }
 }
 
