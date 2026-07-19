@@ -90,11 +90,21 @@ a {
 }
 
 .logo {
-  font-family: var(--font-display);
-  font-size: 1.35rem;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  line-height: 0;
+}
+
+.logo img {
+  height: 28px;
+  width: auto;
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .logo img {
+    height: 32px;
+  }
 }
 
 .header-nav {
@@ -221,9 +231,9 @@ a {
 
 .brand-mark {
   font-family: var(--font-display);
-  font-size: clamp(2.8rem, 9vw, 5.8rem);
+  font-size: clamp(2.2rem, 7.2vw, 4.8rem);
   font-weight: 700;
-  line-height: 0.95;
+  line-height: 1.05;
   letter-spacing: -0.02em;
   margin-bottom: 1.6rem;
   text-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
