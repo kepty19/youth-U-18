@@ -93,17 +93,21 @@ a {
   display: inline-flex;
   align-items: center;
   line-height: 0;
+  padding: 0.35rem 0.55rem;
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .logo img {
-  height: 28px;
+  height: 36px;
   width: auto;
   display: block;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.45));
 }
 
 @media (min-width: 768px) {
   .logo img {
-    height: 32px;
+    height: 44px;
   }
 }
 
@@ -247,6 +251,11 @@ a {
   letter-spacing: 0.01em;
   max-width: 34em;
   margin-bottom: 1.25rem;
+}
+
+.hero-catch-spacer {
+  display: block;
+  height: 1.85em;
 }
 
 .hero-sub {
