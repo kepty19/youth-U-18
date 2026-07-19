@@ -647,12 +647,12 @@ a {
 
 /* Compare tables */
 .compare-container {
-  max-width: 1100px;
+  max-width: 1080px;
 }
 
 .compare-heading {
   text-align: center;
-  margin-bottom: 2.5rem;
+  margin-bottom: 3rem;
 }
 
 .compare-title {
@@ -661,32 +661,45 @@ a {
 }
 
 .compare-block {
-  margin-bottom: 3rem;
+  margin-bottom: 3.5rem;
 }
 
 .compare-block-title {
-  font-family: var(--font-jp);
-  font-size: clamp(1.05rem, 2.4vw, 1.25rem);
+  font-family: var(--font-display);
+  font-size: clamp(1.15rem, 2.5vw, 1.45rem);
   font-weight: 700;
-  margin-bottom: 0.85rem;
-  line-height: 1.5;
+  margin-bottom: 1.25rem;
+  line-height: 1.45;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.compare-block-title::before {
+  content: "";
+  width: 1.65rem;
+  height: 1px;
+  background: linear-gradient(90deg, var(--accent), transparent);
+  flex-shrink: 0;
 }
 
 .compare-scroll-hint {
   display: none;
   align-items: center;
   gap: 0.5rem;
-  margin: 0 0 0.5rem 0.15rem;
+  margin: 0 0 0.65rem 0.2rem;
   font-family: var(--font-jp);
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.18em;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
   color: var(--accent);
 }
 
 .compare-scroll-dot {
-  width: 0.4rem;
-  height: 0.4rem;
+  width: 0.35rem;
+  height: 0.35rem;
   border-radius: 50%;
   background: var(--accent);
   animation: compare-pulse 1.5s ease-in-out infinite;
@@ -702,71 +715,140 @@ a {
   width: 100%;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-  padding-bottom: 0.75rem;
-  background: #fff;
-  border: 1px solid rgba(17, 17, 17, 0.12);
+  padding: 0.15rem;
+  border-radius: 1.15rem;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 252, 248, 0.96));
+  border: 1px solid rgba(143, 79, 44, 0.12);
+  box-shadow:
+    0 1px 2px rgba(89, 48, 24, 0.03),
+    0 18px 40px rgba(89, 48, 24, 0.07);
 }
 
 .matrix-table {
   width: 100%;
-  min-width: 820px;
-  border-collapse: collapse;
+  min-width: 860px;
+  border-collapse: separate;
+  border-spacing: 0;
   font-family: var(--font-jp);
-  font-size: 0.84rem;
-  line-height: 1.55;
-  color: var(--ink);
-  background: #fff;
+  font-size: 0.86rem;
+  line-height: 1.7;
+  color: var(--ink-soft);
+  background: transparent;
 }
 
 .matrix-table th,
 .matrix-table td {
-  border: 1px solid rgba(17, 17, 17, 0.28);
-  padding: 0.7rem 0.65rem;
+  border-right: 1px solid rgba(143, 79, 44, 0.08);
+  border-bottom: 1px solid rgba(143, 79, 44, 0.08);
+  padding: 1rem 0.95rem;
   vertical-align: top;
   text-align: left;
 }
 
+.matrix-table th:last-child,
+.matrix-table td:last-child {
+  border-right: none;
+}
+
+.matrix-table tbody tr:last-child th,
+.matrix-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
 .matrix-table thead th {
-  background: #f3f3f3;
+  background: linear-gradient(180deg, #f7efe8, #f1e4d8);
+  color: var(--ink);
   font-weight: 700;
   text-align: center;
   vertical-align: middle;
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+  border-bottom: 1px solid rgba(143, 79, 44, 0.14);
+  padding: 1.05rem 0.8rem;
 }
 
 .matrix-table thead th span {
   display: inline-block;
-  font-size: 0.75em;
-  font-weight: 600;
+  margin-top: 0.15rem;
+  font-size: 0.78em;
+  font-weight: 500;
+  color: var(--muted);
 }
 
 .matrix-table thead .ours-head {
-  background: var(--accent-soft);
+  background: linear-gradient(165deg, #f4e4d6 0%, #e8d0bc 100%);
   color: var(--accent-deep);
+  position: relative;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.45);
+}
+
+.matrix-table thead .ours-head::after {
+  content: "";
+  position: absolute;
+  left: 18%;
+  right: 18%;
+  bottom: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  opacity: 0.85;
 }
 
 .matrix-table .cat {
-  background: #fafafa;
+  background: linear-gradient(180deg, #faf7f4, #f5efe9);
+  color: var(--ink);
   font-weight: 700;
   text-align: center;
   vertical-align: middle;
-  white-space: nowrap;
-  width: 4.5rem;
+  letter-spacing: 0.12em;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  width: 3.2rem;
+  padding: 1.1rem 0.45rem;
+}
+
+.matrix-table .cat[colspan] {
+  writing-mode: horizontal-tb;
+  letter-spacing: 0.06em;
+  width: auto;
+  padding: 1rem 0.95rem;
+  text-align: left;
 }
 
 .matrix-table .cat-note {
   display: block;
-  margin-top: 0.25rem;
-  font-size: 0.75em;
-  font-weight: 600;
+  margin-top: 0.35rem;
+  font-size: 0.72em;
+  font-weight: 500;
+  letter-spacing: 0.02em;
   color: var(--muted);
+  writing-mode: horizontal-tb;
   white-space: normal;
 }
 
 .matrix-table .sub {
-  background: #fcfcfc;
+  background: rgba(251, 247, 243, 0.7);
+  color: var(--ink);
   font-weight: 700;
   white-space: nowrap;
-  width: 4.8rem;
+  width: 5.2rem;
+  font-size: 0.84rem;
+}
+
+.matrix-table td {
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.matrix-table tbody tr:hover td {
+  background: rgba(255, 250, 246, 0.9);
+}
+
+.matrix-table td:last-child {
+  background: linear-gradient(180deg, rgba(251, 246, 241, 0.75), rgba(245, 236, 227, 0.55));
+}
+
+.matrix-table tbody tr:hover td:last-child {
+  background: linear-gradient(180deg, rgba(248, 240, 232, 0.95), rgba(242, 230, 218, 0.8));
 }
 
 .matrix-table .hl {
@@ -775,13 +857,13 @@ a {
 }
 
 .compare-footnote {
-  margin-top: 0.5rem;
-  margin-bottom: 1.75rem;
+  margin-top: 0.75rem;
+  margin-bottom: 2rem;
   font-family: var(--font-jp);
   font-size: 0.8rem;
   font-weight: 500;
-  color: #737373;
-  line-height: 1.6;
+  color: #8a8a8a;
+  line-height: 1.7;
 }
 
 @keyframes compare-pulse {
