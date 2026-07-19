@@ -6,9 +6,10 @@
   --ink-soft: #3a3a3a;
   --muted: #6b6b6b;
   --line: rgba(17, 17, 17, 0.1);
-  --accent: #e55c29;
-  --accent-deep: #c8491d;
-  --accent-soft: #ffe6db;
+  --accent: #b56a3f;
+  --accent-deep: #8f4f2c;
+  --accent-soft: #f3e4d8;
+  --accent-glow: rgba(143, 79, 44, 0.14);
   --dark: #0a0a0a;
   --dark-2: #141414;
   --font-display: "EB Garamond", "Noto Serif JP", serif;
@@ -164,7 +165,7 @@ a {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(120deg, rgba(229, 92, 41, 0.28), transparent 45%),
+    linear-gradient(120deg, rgba(181, 106, 63, 0.28), transparent 45%),
     linear-gradient(to top, #0a0a0a 8%, transparent 42%),
     url("https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=2400&q=80")
       center / cover no-repeat;
@@ -176,7 +177,7 @@ a {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse at 30% 20%, rgba(229, 92, 41, 0.22), transparent 50%),
+    radial-gradient(ellipse at 30% 20%, rgba(181, 106, 63, 0.22), transparent 50%),
     linear-gradient(180deg, rgba(10, 10, 10, 0.55), rgba(10, 10, 10, 0.72) 55%, #0a0a0a);
 }
 
@@ -346,7 +347,7 @@ a {
 
 .section-dark {
   background:
-    radial-gradient(ellipse at 70% 0%, rgba(229, 92, 41, 0.18), transparent 45%),
+    radial-gradient(ellipse at 70% 0%, rgba(181, 106, 63, 0.18), transparent 45%),
     linear-gradient(180deg, #121212, #0a0a0a);
   color: #fff;
 }
@@ -359,7 +360,7 @@ a {
 
 .section-pricing {
   background:
-    radial-gradient(circle at 20% 10%, rgba(229, 92, 41, 0.28), transparent 42%),
+    radial-gradient(circle at 20% 10%, rgba(181, 106, 63, 0.28), transparent 42%),
     linear-gradient(180deg, #120c0a, #0a0a0a 40%, #14110f);
   color: #fff;
 }
@@ -421,7 +422,7 @@ a {
 
 .future-item {
   padding: 1.6rem 0 0;
-  border-top: 1px solid rgba(229, 92, 41, 0.35);
+  border-top: 1px solid rgba(181, 106, 63, 0.35);
 }
 
 .future-label {
@@ -533,29 +534,30 @@ a {
 }
 
 .split-panel {
-  padding: 1.6rem 1.4rem;
+  padding: 1.75rem 1.5rem;
   background: #fff;
   border: 1px solid var(--line);
+  box-shadow: 0 4px 16px rgba(17, 17, 17, 0.04);
 }
 
 .split-panel.highlight {
-  background: linear-gradient(160deg, #fff6f2, #ffebe0);
-  border-color: rgba(229, 92, 41, 0.28);
-}
-
-.split-kicker {
-  font-family: var(--font-ui);
-  font-size: 0.72rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 0.7rem;
+  background: linear-gradient(165deg, #fbf7f3 0%, #f0e2d4 55%, #ebd6c4 100%);
+  border: 1px solid rgba(181, 106, 63, 0.32);
+  box-shadow:
+    0 1px 2px rgba(89, 48, 24, 0.05),
+    0 10px 24px rgba(89, 48, 24, 0.1),
+    0 22px 44px rgba(89, 48, 24, 0.08);
+  transform: translateY(-2px);
 }
 
 .split-panel h3 {
   font-size: 1.15rem;
   margin-bottom: 0.9rem;
   line-height: 1.5;
+}
+
+.split-panel.highlight h3 {
+  color: var(--accent-deep);
 }
 
 .split-panel p {
@@ -631,7 +633,7 @@ a {
   margin: 2.25rem 0 2rem;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-  border: 1px solid rgba(229, 92, 41, 0.18);
+  border: 1px solid rgba(181, 106, 63, 0.18);
   background: #fff;
 }
 
@@ -652,7 +654,7 @@ a {
 }
 
 .compare-table thead th {
-  background: #fff6f2;
+  background: var(--accent-soft);
   font-weight: 700;
   font-size: 0.9rem;
 }
@@ -674,7 +676,7 @@ a {
 }
 
 .compare-table .ours {
-  background: linear-gradient(180deg, #fff6f2, #ffebe0);
+  background: linear-gradient(180deg, #f7efe8, #edd9c8);
   color: var(--ink);
   font-weight: 500;
 }
@@ -686,15 +688,15 @@ a {
 /* Pricing */
 .pricing-kicker {
   font-size: 1.05rem;
-  color: #fca271;
+  color: #c4895f;
   margin-bottom: 1.75rem;
 }
 
 .price-panel {
   margin: 0 0 2rem;
   padding: 1.8rem 1.5rem;
-  border: 1px solid rgba(229, 92, 41, 0.35);
-  background: rgba(229, 92, 41, 0.08);
+  border: 1px solid rgba(181, 106, 63, 0.35);
+  background: rgba(181, 106, 63, 0.08);
   text-align: center;
 }
 
