@@ -627,22 +627,62 @@ a {
   font-size: 1rem;
 }
 
-/* Quote */
+/* Quote — editorial dialogue, not callout box */
 .quote-panel {
-  margin: 2rem 0;
-  padding: 1.5rem 1.4rem;
-  border-left: 3px solid var(--accent);
-  background: rgba(255, 255, 255, 0.04);
+  position: relative;
+  margin: 3rem auto;
+  max-width: 34rem;
+  padding: 0.5rem 0 0.25rem;
+  border: none;
+  background: none;
+  text-align: center;
+}
+
+.quote-panel::before {
+  content: "“";
+  display: block;
+  margin: 0 auto 0.35rem;
+  font-family: var(--font-display);
+  font-size: clamp(3.2rem, 8vw, 4.4rem);
+  font-weight: 400;
+  line-height: 0.7;
+  color: var(--accent);
+  opacity: 0.7;
 }
 
 .quote-panel p {
-  font-size: 1.08rem;
-  font-style: italic;
-  color: rgba(255, 255, 255, 0.9);
+  position: relative;
+  margin: 0;
+  padding: 1.15rem 0.5rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.02rem, 2.2vw, 1.18rem);
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.92);
 }
 
 .quote-panel p + p {
-  margin-top: 0.85rem;
+  margin-top: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.quote-panel p::before,
+.quote-panel p::after {
+  font-family: var(--font-display);
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.38);
+}
+
+.quote-panel p::before {
+  content: "「";
+  margin-right: 0.05em;
+}
+
+.quote-panel p::after {
+  content: "」";
+  margin-left: 0.05em;
 }
 
 /* Compare tables */
