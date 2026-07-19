@@ -93,21 +93,17 @@ a {
   display: inline-flex;
   align-items: center;
   line-height: 0;
-  padding: 0.35rem 0.55rem;
-  border-radius: 0.5rem;
-  background: rgba(255, 255, 255, 0.1);
 }
 
 .logo img {
-  height: 36px;
+  height: 40px;
   width: auto;
   display: block;
-  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.45));
 }
 
 @media (min-width: 768px) {
   .logo img {
-    height: 44px;
+    height: 64px;
   }
 }
 
@@ -239,7 +235,7 @@ a {
   font-weight: 700;
   line-height: 1.05;
   letter-spacing: -0.02em;
-  margin-bottom: 1.6rem;
+  margin-bottom: 0;
   text-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
 }
 
@@ -250,12 +246,8 @@ a {
   line-height: 1.85;
   letter-spacing: 0.01em;
   max-width: 34em;
+  margin-top: 1.85em;
   margin-bottom: 1.25rem;
-}
-
-.hero-catch-spacer {
-  display: block;
-  height: 1.85em;
 }
 
 .hero-sub {
@@ -370,18 +362,6 @@ a {
     radial-gradient(circle at 20% 10%, rgba(229, 92, 41, 0.28), transparent 42%),
     linear-gradient(180deg, #120c0a, #0a0a0a 40%, #14110f);
   color: #fff;
-}
-
-.section-index {
-  font-family: var(--font-ui);
-  font-size: 0.78rem;
-  letter-spacing: 0.2em;
-  color: var(--accent);
-  margin-bottom: 1rem;
-}
-
-.section-index.light {
-  color: #fca271;
 }
 
 .section-title {
