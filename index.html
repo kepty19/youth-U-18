@@ -17,7 +17,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Noto+Serif+JP:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inter:wght@400;500;600;700;800;900&family=Noto+Serif+JP:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
@@ -27,7 +27,7 @@
       <a class="logo" href="#top" aria-label="Kepty English U-18">
         <img src="./assets/kepty-logo.svg" alt="Kepty" width="160" height="40" />
       </a>
-      <nav class="header-nav" aria-label="主要ナビ">
+      <nav class="header-nav keep-original-font" aria-label="主要ナビ">
         <a href="#future">未来</a>
         <a href="#solution">仕組み</a>
         <a href="#compare">比較</a>
@@ -241,65 +241,73 @@
 
       <!-- 7. 教育投資の比較 -->
       <section class="section section-cream" id="compare">
-        <div class="container">
-          <h2 class="section-title reveal" data-reveal>
-            費用、効果、割かれる人間力。<br />他の選択肢との決定的な違い。
-          </h2>
-
-          <div class="table-wrap reveal" data-reveal>
-            <table class="compare-table">
-              <thead>
-                <tr>
-                  <th>比較軸</th>
-                  <th class="ours">当スクールのコーチング</th>
-                  <th>一般的な学習塾<br /><span>（集団・個別）</span></th>
-                  <th>一般的な英会話<br /><span>（スクール・オンライン）</span></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th>6ヶ月の費用感</th>
-                  <td class="ours">30万〜35万円</td>
-                  <td>20万〜30万円<br /><span class="muted">（講習含む）</span></td>
-                  <td>15万〜25万円<br /><span class="muted">（入会金等含む）</span></td>
-                </tr>
-                <tr>
-                  <th>学習の「量」</th>
-                  <td class="ours">
-                    <strong>【圧倒的】</strong><br />24時間ICT×進捗管理
-                  </td>
-                  <td>【限定的】週数時間の授業のみ</td>
-                  <td>【圧倒的不足】週1回〜数回のレッスンのみ</td>
-                </tr>
-                <tr>
-                  <th>学習の「継続」</th>
-                  <td class="ours">プロ選手とのシナジー×長期計画</td>
-                  <td>受験などの義務感のみ</td>
-                  <td>本人のやる気頼み（離脱率高）</td>
-                </tr>
-                <tr>
-                  <th>身につく技術</th>
-                  <td class="ours">実戦的なスピーキング・リスニング</td>
-                  <td>受験用のリーディング・ライティング</td>
-                  <td>日常のライトな英会話（定着しにくい）</td>
-                </tr>
-                <tr>
-                  <th>育まれる「心」</th>
-                  <td class="ours">
-                    <strong>【最大の特徴】</strong><br />自律心・自己管理力
-                  </td>
-                  <td>敷かれたレールを走る受動性</td>
-                  <td>変化なし</td>
-                </tr>
-                <tr>
-                  <th>受験・資格対策</th>
-                  <td class="ours">英検などの優遇措置も100%対応</td>
-                  <td>塾のカリキュラムによる</td>
-                  <td>資格対策は別料金・別コースが主流</td>
-                </tr>
-              </tbody>
-            </table>
+        <div class="container compare-container">
+          <div class="compare-heading reveal" data-reveal>
+            <h2 class="section-title compare-title">
+              費用、効果、割かれる人間力。<br />他の選択肢との決定的な違い。
+            </h2>
+            <div class="compare-title-rule" aria-hidden="true"></div>
           </div>
+
+          <div class="compare-scroll-hint reveal" data-reveal aria-hidden="true">
+            <span class="compare-scroll-dot"></span>
+            scroll→
+          </div>
+
+          <div class="compare-scroll reveal" data-reveal>
+            <div class="compare-board">
+              <!-- Labels -->
+              <div class="compare-col compare-col-labels">
+                <div class="compare-spacer" aria-hidden="true"></div>
+                <div class="compare-pill compare-pill-label">6ヶ月の費用感</div>
+                <div class="compare-pill compare-pill-label">学習の「量」</div>
+                <div class="compare-pill compare-pill-label">学習の「継続」</div>
+                <div class="compare-pill compare-pill-label">身につく技術</div>
+                <div class="compare-pill compare-pill-label">育まれる「心」</div>
+                <div class="compare-pill compare-pill-label">受験・資格対策</div>
+              </div>
+
+              <!-- 一般的な学習塾 -->
+              <div class="compare-col">
+                <div class="compare-pill compare-pill-head">一般的な学習塾<br /><span>（集団・個別）</span></div>
+                <div class="compare-cell">20万〜30万円<br /><span class="muted">（講習含む）</span></div>
+                <div class="compare-cell">【限定的】<br />週数時間の授業のみ</div>
+                <div class="compare-cell">受験などの義務感のみ</div>
+                <div class="compare-cell">受験用の<br />リーディング・ライティング</div>
+                <div class="compare-cell">敷かれたレールを走る受動性</div>
+                <div class="compare-cell">塾のカリキュラムによる</div>
+              </div>
+
+              <!-- 一般的な英会話 -->
+              <div class="compare-col">
+                <div class="compare-pill compare-pill-head">一般的な英会話<br /><span>（スクール・オンライン）</span></div>
+                <div class="compare-cell">15万〜25万円<br /><span class="muted">（入会金等含む）</span></div>
+                <div class="compare-cell">【圧倒的不足】<br />週1回〜数回のレッスンのみ</div>
+                <div class="compare-cell">本人のやる気頼み<br />（離脱率高）</div>
+                <div class="compare-cell">日常のライトな英会話<br />（定着しにくい）</div>
+                <div class="compare-cell">変化なし</div>
+                <div class="compare-cell">資格対策は別料金・別コースが主流</div>
+              </div>
+
+              <!-- Kepty English U-18 (highlighted) -->
+              <div class="compare-col compare-col-ours">
+                <div class="compare-ours-frame" aria-hidden="true"></div>
+                <div class="compare-col-ours-inner">
+                  <div class="compare-pill compare-pill-head">Kepty English<br />U-18</div>
+                  <div class="compare-cell compare-cell-ours">30万〜35万円</div>
+                  <div class="compare-cell compare-cell-ours"><strong>【圧倒的】</strong><br />24時間ICT×進捗管理</div>
+                  <div class="compare-cell compare-cell-ours">プロ選手とのシナジー×長期計画</div>
+                  <div class="compare-cell compare-cell-ours">実戦的なスピーキング・リスニング</div>
+                  <div class="compare-cell compare-cell-ours"><strong>【最大の特徴】</strong><br />自律心・自己管理力</div>
+                  <div class="compare-cell compare-cell-ours">英検などの優遇措置も100%対応</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p class="compare-footnote reveal" data-reveal>
+            ※上記、あくまで参考の実態・比較表になります
+          </p>
 
           <div class="prose reveal" data-reveal>
             <p>
