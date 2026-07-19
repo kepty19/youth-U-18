@@ -12,9 +12,10 @@
   --accent-glow: rgba(143, 79, 44, 0.14);
   --dark: #0a0a0a;
   --dark-2: #141414;
+  --font-en: "EB Garamond", "Noto Serif JP", serif;
+  --font-jp: "EB Garamond", "Noto Serif JP", serif;
   --font-display: "EB Garamond", "Noto Serif JP", serif;
-  --font-jp: "Noto Serif JP", "EB Garamond", serif;
-  --font-ui: "Outfit", system-ui, sans-serif;
+  --font-ui: "EB Garamond", "Noto Serif JP", serif;
   --container: 1100px;
   --narrow: 760px;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
