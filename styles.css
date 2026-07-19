@@ -627,6 +627,11 @@ a {
   font-size: 1rem;
 }
 
+.em {
+  color: var(--accent-deep);
+  font-weight: 700;
+}
+
 /* Quote — editorial dialogue, not callout box */
 .quote-panel {
   position: relative;
