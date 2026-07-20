@@ -633,6 +633,108 @@ a {
   font-weight: 700;
 }
 
+/* Service overview */
+.section-overview {
+  background:
+    linear-gradient(180deg, #faf6f2 0%, #fff8f3 48%, #f7f0ea 100%);
+  color: var(--ink);
+}
+
+.overview-heading {
+  text-align: center;
+  margin-bottom: 3.25rem;
+}
+
+.overview-eyebrow {
+  font-family: var(--font-en);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.85rem;
+}
+
+.overview-title {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.overview-grid {
+  display: grid;
+  gap: 0;
+  max-width: 980px;
+  margin: 0 auto;
+  border-top: 1px solid rgba(143, 79, 44, 0.14);
+}
+
+@media (min-width: 860px) {
+  .overview-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.overview-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.15rem 1.35rem;
+  padding: 2.1rem 0 2.2rem;
+  border-bottom: 1px solid rgba(143, 79, 44, 0.14);
+}
+
+@media (min-width: 860px) {
+  .overview-item {
+    padding: 2.35rem 1.75rem 2.45rem;
+  }
+
+  .overview-item:nth-child(odd) {
+    border-right: 1px solid rgba(143, 79, 44, 0.14);
+    padding-left: 0;
+    padding-right: 2rem;
+  }
+
+  .overview-item:nth-child(even) {
+    padding-left: 2rem;
+    padding-right: 0;
+  }
+
+  .overview-item:nth-last-child(-n + 2) {
+    border-bottom: none;
+  }
+}
+
+@media (max-width: 859px) {
+  .overview-item:last-child {
+    border-bottom: none;
+  }
+}
+
+.overview-num {
+  font-family: var(--font-en);
+  font-size: clamp(1.55rem, 3vw, 1.95rem);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+  padding-top: 0.2rem;
+}
+
+.overview-body h3 {
+  font-family: var(--font-jp);
+  font-size: clamp(1.12rem, 2.2vw, 1.35rem);
+  font-weight: 700;
+  line-height: 1.45;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.85rem;
+  color: var(--ink);
+}
+
+.overview-body p {
+  color: var(--ink-soft);
+  font-size: 0.98rem;
+  line-height: 1.9;
+}
+
 /* Quote — editorial dialogue, not callout box */
 .quote-panel {
   position: relative;
