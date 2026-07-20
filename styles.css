@@ -728,6 +728,15 @@ a {
   line-height: 1.9;
 }
 
+.overview-item-note .overview-body h3 {
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  color: var(--muted);
+}
+
+.overview-item-note .overview-num {
+  opacity: 0.72;
+}
+
 /* Quote — editorial dialogue, not callout box */
 .quote-panel {
   position: relative;
