@@ -1222,15 +1222,8 @@ a {
   font-size: 1.55rem;
   font-weight: 700;
   letter-spacing: 0.02em;
-  margin-bottom: 0.55rem;
-  color: var(--ink);
-}
-
-.contact-desc {
-  font-size: 0.9rem;
-  line-height: 1.7;
-  color: var(--muted);
   margin-bottom: 1.35rem;
+  color: var(--ink);
 }
 
 .contact-form {
