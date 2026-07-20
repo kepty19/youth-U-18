@@ -1169,13 +1169,16 @@ a {
 
 .closing-cta .btn {
   box-sizing: border-box;
+  width: min(100%, 20.5rem);
   min-height: 3.1rem;
-  padding: 0.9rem 1.45rem;
+  padding: 0.9rem 1.25rem;
   font-size: 0.9rem;
   font-weight: 600;
   line-height: 1.25;
   border-width: 1px;
   border-style: solid;
+  text-align: center;
+  white-space: nowrap;
 }
 
 .closing-cta .btn-primary {
