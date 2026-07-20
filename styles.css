@@ -912,6 +912,11 @@ a {
 
 .matrix-table thead th:first-child {
   width: 8rem;
+  position: sticky;
+  left: 0;
+  z-index: 5;
+  background: linear-gradient(180deg, #f7efe8, #f1e4d8);
+  box-shadow: 6px 0 12px -8px rgba(89, 48, 24, 0.22);
 }
 
 .matrix-table thead th:nth-child(2),
@@ -961,16 +966,21 @@ a {
   padding: 0.85rem 0.25rem;
   font-size: 0.76rem;
   line-height: 1.45;
+  position: sticky;
+  left: 0;
+  z-index: 3;
+  box-shadow: 6px 0 12px -8px rgba(89, 48, 24, 0.18);
 }
 
 .matrix-table .cat[colspan] {
-  width: auto;
-  min-width: 0;
-  max-width: none;
+  width: 8rem;
+  min-width: 8rem;
+  max-width: 8rem;
   padding: 1.05rem 0.55rem;
   text-align: center;
   letter-spacing: 0.06em;
   font-size: 0.82rem;
+  z-index: 4;
 }
 
 .matrix-table .cat-note {
@@ -984,7 +994,7 @@ a {
 }
 
 .matrix-table .sub {
-  background: rgba(251, 247, 243, 0.7);
+  background: rgba(251, 247, 243, 0.98);
   color: var(--ink);
   font-weight: 700;
   white-space: nowrap;
@@ -996,6 +1006,10 @@ a {
   letter-spacing: 0.02em;
   padding-left: 0.3rem;
   padding-right: 0.3rem;
+  position: sticky;
+  left: 4rem;
+  z-index: 2;
+  box-shadow: 6px 0 12px -8px rgba(89, 48, 24, 0.16);
 }
 
 .matrix-table td {
