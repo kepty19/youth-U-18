@@ -169,11 +169,11 @@ a {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(120deg, rgba(181, 106, 63, 0.28), transparent 45%),
-    linear-gradient(to top, #0a0a0a 8%, transparent 42%),
-    url("https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=2400&q=80")
-      center / cover no-repeat;
-  transform: scale(1.04);
+    radial-gradient(circle at 18% 18%, rgba(215, 169, 134, 0.34), transparent 26%),
+    radial-gradient(circle at 82% 24%, rgba(181, 106, 63, 0.2), transparent 24%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.08), transparent 38%),
+    linear-gradient(160deg, #2b211d 0%, #130f0e 42%, #090909 100%);
+  transform: scale(1.02);
   animation: hero-kenburns 18s ease-in-out infinite alternate;
 }
 
@@ -181,8 +181,47 @@ a {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse at 30% 20%, rgba(181, 106, 63, 0.22), transparent 50%),
-    linear-gradient(180deg, rgba(10, 10, 10, 0.55), rgba(10, 10, 10, 0.72) 55%, #0a0a0a);
+    linear-gradient(180deg, rgba(6, 6, 6, 0.18), rgba(6, 6, 6, 0.45) 48%, rgba(6, 6, 6, 0.74)),
+    radial-gradient(ellipse at 50% 18%, rgba(255, 245, 236, 0.07), transparent 36%);
+}
+
+.hero-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(18px);
+  mix-blend-mode: screen;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.hero-glow-a {
+  width: min(48vw, 560px);
+  height: min(48vw, 560px);
+  right: -8vw;
+  top: -10vh;
+  background: radial-gradient(circle, rgba(198, 139, 102, 0.28), rgba(198, 139, 102, 0.04) 58%, transparent 72%);
+}
+
+.hero-glow-b {
+  width: min(34vw, 420px);
+  height: min(34vw, 420px);
+  left: -6vw;
+  bottom: 10vh;
+  background: radial-gradient(circle, rgba(245, 230, 214, 0.12), rgba(245, 230, 214, 0.03) 56%, transparent 72%);
+}
+
+.hero-frame {
+  position: absolute;
+  inset: 3.8rem 3.8rem auto;
+  height: 58%;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1.5rem;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 26%),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03), transparent 34%, transparent 66%, rgba(255, 255, 255, 0.03));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  opacity: 0.7;
+  pointer-events: none;
 }
 
 .hero-grain {
@@ -194,38 +233,12 @@ a {
   pointer-events: none;
 }
 
-.hero-pitch-lines {
-  position: absolute;
-  inset: 12% 8% auto;
-  height: 55%;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 2px;
-  opacity: 0.55;
-  pointer-events: none;
-}
-
-.hero-pitch-lines::before,
-.hero-pitch-lines::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.hero-pitch-lines::before {
-  top: 0;
-  bottom: 0;
-  width: 1px;
-  background: rgba(255, 255, 255, 0.08);
-}
-
-.hero-pitch-lines::after {
-  top: 50%;
-  width: min(28vw, 220px);
-  height: min(28vw, 220px);
-  margin-top: calc(min(28vw, 220px) / -2);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 50%;
+@media (max-width: 768px) {
+  .hero-frame {
+    inset: 5.5rem 1.4rem auto;
+    height: 48%;
+    border-radius: 1.1rem;
+  }
 }
 
 .hero-inner {
