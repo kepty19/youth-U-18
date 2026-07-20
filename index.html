@@ -32,7 +32,7 @@
         <a href="#solution">仕組み</a>
         <a href="#overview">概要</a>
         <a href="#compare">比較</a>
-        <a href="#pricing" class="header-cta">相談する</a>
+        <button type="button" class="header-cta contact-open">相談する</button>
       </nav>
     </header>
 
@@ -689,9 +689,9 @@
             真のグローバル人材を目指して。
           </h2>
           <div class="cta-row closing-cta reveal" data-reveal>
-            <a class="btn btn-primary btn-lg" href="mailto:hello@kepty.jp?subject=Kepty%20Youth%20お問い合わせ">
+            <button type="button" class="btn btn-primary btn-lg contact-open">
               まずは相談する
-            </a>
+            </button>
             <a class="btn btn-ghost-light" href="https://www.keptyenglish.jp/" target="_blank" rel="noopener noreferrer">
               大人版 Kepty English を見る
             </a>
@@ -710,6 +710,86 @@
         </div>
       </div>
     </footer>
+
+    <div class="contact-modal" id="contact-modal" hidden aria-hidden="true">
+      <div class="contact-backdrop" data-contact-close></div>
+      <div
+        class="contact-dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="contact-title"
+        aria-describedby="contact-desc"
+      >
+        <button type="button" class="contact-close" data-contact-close aria-label="閉じる">
+          <span aria-hidden="true">&times;</span>
+        </button>
+
+        <div class="contact-panel" id="contact-form-panel">
+          <h2 class="contact-title" id="contact-title">Contact Us</h2>
+          <p class="contact-desc" id="contact-desc">
+            ご不明点や受講相談など、些細なことでもお気軽にお問い合わせください。
+          </p>
+
+          <form class="contact-form" id="contact-form" novalidate>
+            <p class="contact-error" id="contact-error" hidden></p>
+
+            <div class="contact-field">
+              <label for="contact-name">お名前 / Name <span class="contact-required">*</span></label>
+              <input
+                id="contact-name"
+                type="text"
+                name="userName"
+                required
+                autocomplete="name"
+                placeholder="例：山田 太郎"
+              />
+            </div>
+
+            <div class="contact-field">
+              <label for="contact-email">メールアドレス / Email <span class="contact-required">*</span></label>
+              <input
+                id="contact-email"
+                type="email"
+                name="userEmail"
+                required
+                autocomplete="email"
+                placeholder="example@kepty.co"
+              />
+            </div>
+
+            <div class="contact-field">
+              <label for="contact-message">お問い合わせ内容 / Message <span class="contact-required">*</span></label>
+              <textarea
+                id="contact-message"
+                name="userMessage"
+                rows="4"
+                required
+                placeholder="ご不明点や受講相談など、些細なことでもお気軽にお問い合わせください！"
+              ></textarea>
+            </div>
+
+            <button type="submit" class="contact-submit" id="contact-submit">
+              Send Message
+            </button>
+          </form>
+        </div>
+
+        <div class="contact-success" id="contact-success" hidden>
+          <div class="contact-success-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+          </div>
+          <h3 class="contact-success-title">送信が完了しました</h3>
+          <p class="contact-success-text">
+            お問い合わせありがとうございます。ご入力いただいた内容を確認の上、担当者よりご連絡いたします。
+          </p>
+          <button type="button" class="contact-submit contact-submit-secondary" data-contact-close>
+            閉じる
+          </button>
+        </div>
+      </div>
+    </div>
 
     <script src="./main.js"></script>
   </body>
