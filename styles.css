@@ -1130,16 +1130,6 @@ a {
   background: #fcfaf8;
 }
 
-/* Kepty column: clear contrast against white cells */
-.matrix-table td:last-child {
-  background: #f8f1e9;
-  box-shadow: inset 3px 0 0 0 #b56a3f;
-}
-
-.matrix-table tbody tr:hover td:last-child {
-  background: #f3e8dc;
-}
-
 .matrix-table .cell-center {
   text-align: center;
   vertical-align: middle;
@@ -1152,11 +1142,6 @@ a {
   font-weight: 600;
   letter-spacing: 0.01em;
   white-space: nowrap;
-}
-
-.matrix-table td:last-child.cell-price {
-  color: var(--accent-deep);
-  font-weight: 700;
 }
 
 .matrix-table .cell-list {
@@ -1184,10 +1169,6 @@ a {
   border-radius: 50%;
   background: rgba(89, 48, 24, 0.35);
   transform: translateY(-50%);
-}
-
-.matrix-table td:last-child .cell-list li::before {
-  background: var(--accent-deep);
 }
 
 .matrix-table .cell-list li:has(.hl)::before {
@@ -1347,21 +1328,12 @@ a {
     line-height: 1.4;
   }
 
-  .matrix-table td:last-child {
-    background: #f8f1e9;
-    box-shadow: inset 3px 0 0 0 #b56a3f;
-  }
-
   .matrix-table td:last-child::before {
     color: var(--accent-deep);
   }
 
   .matrix-table tbody tr:hover td {
     background: #fff;
-  }
-
-  .matrix-table tbody tr:hover td:last-child {
-    background: #f8f1e9;
   }
 
   .matrix-table .cell-center,
