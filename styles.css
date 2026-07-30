@@ -1289,13 +1289,13 @@ a {
     width: 100%;
     min-width: 0;
     max-width: none;
-    padding: 0.6rem 0.95rem;
+    padding: 0.65rem 0.95rem;
     text-align: left;
     letter-spacing: 0.08em;
     font-size: 0.76rem;
-    background: #f3eee8;
+    background: #ebe3da;
     color: var(--ink);
-    border-bottom: 1px solid rgba(89, 48, 24, 0.08);
+    border-bottom: 1px solid rgba(89, 48, 24, 0.12);
     white-space: normal;
   }
 
