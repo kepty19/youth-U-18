@@ -163,4 +163,46 @@
       }
     }
   });
+
+  const compareTabs = document.querySelectorAll("[data-compare-tab]");
+  const comparePanels = document.querySelectorAll("[data-compare-panel]");
+
+  const activateCompareTab = (key) => {
+    compareTabs.forEach((tab) => {
+      const active = tab.getAttribute("data-compare-tab") === key;
+      tab.classList.toggle("is-active", active);
+      tab.setAttribute("aria-selected", active ? "true" : "false");
+      tab.tabIndex = active ? 0 : -1;
+    });
+
+    comparePanels.forEach((panel) => {
+      const active = panel.getAttribute("data-compare-panel") === key;
+      panel.classList.toggle("is-active", active);
+      panel.hidden = !active;
+    });
+  };
+
+  compareTabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      activateCompareTab(tab.getAttribute("data-compare-tab"));
+    });
+
+    tab.addEventListener("keydown", (event) => {
+      const keys = ["ArrowLeft", "ArrowRight", "Home", "End"];
+      if (!keys.includes(event.key)) return;
+
+      event.preventDefault();
+      const tabs = Array.from(compareTabs);
+      const index = tabs.indexOf(tab);
+      let next = index;
+
+      if (event.key === "ArrowRight") next = (index + 1) % tabs.length;
+      if (event.key === "ArrowLeft") next = (index - 1 + tabs.length) % tabs.length;
+      if (event.key === "Home") next = 0;
+      if (event.key === "End") next = tabs.length - 1;
+
+      tabs[next].focus();
+      activateCompareTab(tabs[next].getAttribute("data-compare-tab"));
+    });
+  });
 })();

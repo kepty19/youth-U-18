@@ -339,9 +339,58 @@
             </h2>
           </div>
 
+          <div
+            class="compare-tabs reveal"
+            data-reveal
+            role="tablist"
+            aria-label="比較する年代・サービス"
+          >
+            <button
+              type="button"
+              class="compare-tab is-active"
+              role="tab"
+              id="compare-tab-elem"
+              aria-selected="true"
+              aria-controls="compare-panel-elem"
+              data-compare-tab="elem"
+            >
+              小学5〜6年生
+            </button>
+            <button
+              type="button"
+              class="compare-tab"
+              role="tab"
+              id="compare-tab-junior"
+              aria-selected="false"
+              aria-controls="compare-panel-junior"
+              data-compare-tab="junior"
+              tabindex="-1"
+            >
+              中学生〜高校生
+            </button>
+            <button
+              type="button"
+              class="compare-tab"
+              role="tab"
+              id="compare-tab-school"
+              aria-selected="false"
+              aria-controls="compare-panel-school"
+              data-compare-tab="school"
+              tabindex="-1"
+            >
+              英会話スクール
+            </button>
+          </div>
+
           <!-- 1. 小学生 -->
-          <article class="compare-block reveal" data-reveal>
-            <h3 class="compare-block-title">【小学5〜6年生】学習塾との比較</h3>
+          <article
+            class="compare-block is-active"
+            id="compare-panel-elem"
+            role="tabpanel"
+            aria-labelledby="compare-tab-elem"
+            data-compare-panel="elem"
+          >
+            <h3 class="compare-block-title">学習塾との比較</h3>
             <p class="compare-scroll-hint" aria-hidden="true"><span class="compare-scroll-dot"></span>scroll→</p>
             <div class="compare-scroll">
               <table class="matrix-table">
@@ -463,8 +512,15 @@
           </article>
 
           <!-- 2. 中高生 -->
-          <article class="compare-block reveal" data-reveal>
-            <h3 class="compare-block-title">【中学生〜高校生】学習塾との比較</h3>
+          <article
+            class="compare-block"
+            id="compare-panel-junior"
+            role="tabpanel"
+            aria-labelledby="compare-tab-junior"
+            data-compare-panel="junior"
+            hidden
+          >
+            <h3 class="compare-block-title">学習塾との比較</h3>
             <p class="compare-scroll-hint" aria-hidden="true"><span class="compare-scroll-dot"></span>scroll→</p>
             <div class="compare-scroll">
               <table class="matrix-table">
@@ -586,8 +642,15 @@
           </article>
 
           <!-- 3. 英会話スクール -->
-          <article class="compare-block reveal" data-reveal>
-            <h3 class="compare-block-title">【全年代】英会話スクールとの比較</h3>
+          <article
+            class="compare-block"
+            id="compare-panel-school"
+            role="tabpanel"
+            aria-labelledby="compare-tab-school"
+            data-compare-panel="school"
+            hidden
+          >
+            <h3 class="compare-block-title">英会話スクールとの比較</h3>
             <p class="compare-scroll-hint" aria-hidden="true"><span class="compare-scroll-dot"></span>scroll→</p>
             <div class="compare-scroll">
               <table class="matrix-table">

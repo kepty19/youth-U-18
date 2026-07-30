@@ -605,8 +605,7 @@ a {
   line-height: 1.65;
   color: var(--muted);
   background: rgba(143, 79, 44, 0.045);
-  border-left: 2px solid rgba(143, 79, 44, 0.28);
-  border-radius: 0 0.55rem 0.55rem 0;
+  border-radius: 0.55rem;
 }
 
 .inline-note-mark {
@@ -826,7 +825,7 @@ a {
 
 .compare-heading {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 1.75rem;
 }
 
 .compare-title {
@@ -834,8 +833,81 @@ a {
   margin-bottom: 0;
 }
 
+.compare-tabs {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0;
+  margin: 0 auto 2rem;
+  max-width: 36rem;
+  border-bottom: 1px solid rgba(143, 79, 44, 0.16);
+}
+
+.compare-tab {
+  appearance: none;
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  font-family: var(--font-jp);
+  font-size: clamp(0.78rem, 2.4vw, 0.92rem);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1.35;
+  padding: 0.85rem 0.5rem 0.95rem;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.25s var(--ease);
+}
+
+.compare-tab::after {
+  content: "";
+  position: absolute;
+  left: 12%;
+  right: 12%;
+  bottom: -1px;
+  height: 2px;
+  background: transparent;
+  transition: background 0.25s var(--ease);
+}
+
+.compare-tab:hover {
+  color: var(--accent-deep);
+}
+
+.compare-tab.is-active {
+  color: var(--accent-deep);
+}
+
+.compare-tab.is-active::after {
+  background: var(--accent);
+}
+
+.compare-tab:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+@media (max-width: 560px) {
+  .compare-tabs {
+    max-width: none;
+  }
+
+  .compare-tab {
+    padding: 0.75rem 0.35rem 0.85rem;
+    font-size: 0.76rem;
+  }
+
+  .compare-tab::after {
+    left: 8%;
+    right: 8%;
+  }
+}
+
 .compare-block {
-  margin-bottom: 3.5rem;
+  margin-bottom: 2rem;
+}
+
+.compare-block[hidden] {
+  display: none;
 }
 
 .compare-block-title {
@@ -1148,6 +1220,11 @@ a {
     display: none;
   }
 
+  .compare-block-title {
+    margin-bottom: 0.85rem;
+    font-size: 1.05rem;
+  }
+
   .compare-scroll {
     overflow: visible;
     padding: 0;
@@ -1162,7 +1239,7 @@ a {
     width: 100%;
     table-layout: auto;
     border-collapse: collapse;
-    font-size: 0.84rem;
+    font-size: 0.82rem;
   }
 
   .matrix-table thead {
@@ -1188,14 +1265,11 @@ a {
   }
 
   .matrix-table tr {
-    margin-bottom: 0.85rem;
-    border: 1px solid rgba(143, 79, 44, 0.12);
-    border-radius: 1rem;
+    margin-bottom: 0.7rem;
+    border: 1px solid rgba(143, 79, 44, 0.1);
+    border-radius: 0.85rem;
     overflow: hidden;
-    background: rgba(255, 255, 255, 0.96);
-    box-shadow:
-      0 1px 2px rgba(89, 48, 24, 0.03),
-      0 10px 24px rgba(89, 48, 24, 0.05);
+    background: #fff;
   }
 
   .matrix-table th,
@@ -1215,17 +1289,17 @@ a {
   .matrix-table .sub,
   .matrix-table .cat[colspan] {
     width: 100%;
-    padding: 0.8rem 1rem;
+    padding: 0.55rem 0.85rem;
     text-align: left;
     letter-spacing: 0.04em;
-    font-size: 0.82rem;
-    background: linear-gradient(180deg, #f7efe8, #f1e4d8);
-    border-bottom: 1px solid rgba(143, 79, 44, 0.1);
+    font-size: 0.78rem;
+    background: #f6eee7;
+    border-bottom: 1px solid rgba(143, 79, 44, 0.08);
   }
 
   .matrix-table .cat[colspan] {
-    padding: 0.85rem 1rem;
-    font-size: 0.84rem;
+    padding: 0.6rem 0.85rem;
+    font-size: 0.8rem;
   }
 
   .matrix-table .cat-note {
@@ -1235,25 +1309,30 @@ a {
   }
 
   .matrix-table td {
-    padding: 0.85rem 1rem 0.95rem;
+    position: relative;
+    padding: 0.65rem 0.85rem 0.65rem 7rem;
     background: #fff;
-    border-top: 1px solid rgba(143, 79, 44, 0.08);
+    border-top: 1px solid rgba(143, 79, 44, 0.07);
     vertical-align: top;
     text-align: left;
   }
 
   .matrix-table td::before {
     content: attr(data-label);
-    display: block;
-    margin-bottom: 0.4rem;
-    font-size: 0.7rem;
+    position: absolute;
+    left: 0.85rem;
+    top: 0.7rem;
+    width: 5.5rem;
+    margin: 0;
+    font-size: 0.68rem;
     font-weight: 700;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.04em;
     color: var(--muted);
+    line-height: 1.4;
   }
 
   .matrix-table td:last-child {
-    background: linear-gradient(180deg, rgba(251, 246, 241, 0.95), rgba(245, 236, 227, 0.72));
+    background: rgba(248, 240, 232, 0.7);
   }
 
   .matrix-table td:last-child::before {
@@ -1265,7 +1344,7 @@ a {
   }
 
   .matrix-table tbody tr:hover td:last-child {
-    background: linear-gradient(180deg, rgba(251, 246, 241, 0.95), rgba(245, 236, 227, 0.72));
+    background: rgba(248, 240, 232, 0.7);
   }
 
   .matrix-table .cell-center,
@@ -1275,11 +1354,24 @@ a {
   }
 
   .matrix-table .cell-price {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
 
   .matrix-table .cell-list {
-    gap: 0.3rem;
+    gap: 0.22rem;
+  }
+
+  .matrix-table .cell-list li {
+    line-height: 1.5;
+  }
+
+  .matrix-table .cell-lead {
+    margin-bottom: 0.3rem;
+    font-size: 0.9em;
+  }
+
+  .matrix-table .cell-note {
+    margin-top: 0.1rem;
   }
 }
 
