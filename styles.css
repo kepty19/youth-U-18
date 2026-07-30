@@ -819,13 +819,19 @@ a {
 }
 
 /* Compare tables */
+#compare.section-warm {
+  background:
+    radial-gradient(ellipse 90% 55% at 50% -10%, rgba(255, 255, 255, 0.85), transparent 70%),
+    linear-gradient(180deg, #faf7f3 0%, #f5efe8 48%, #efe6dc 100%);
+}
+
 .compare-container {
   max-width: 1080px;
 }
 
 .compare-heading {
   text-align: center;
-  margin-bottom: 1.75rem;
+  margin-bottom: 1.5rem;
 }
 
 .compare-title {
@@ -837,22 +843,22 @@ a {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0;
-  margin: 0 auto 2rem;
-  max-width: 36rem;
-  border-bottom: 1px solid rgba(143, 79, 44, 0.16);
+  margin: 0 auto 2.25rem;
+  max-width: 34rem;
+  border-bottom: 1px solid rgba(89, 48, 24, 0.14);
 }
 
 .compare-tab {
   appearance: none;
   border: none;
   background: transparent;
-  color: var(--muted);
+  color: rgba(58, 58, 58, 0.62);
   font-family: var(--font-jp);
-  font-size: clamp(0.78rem, 2.4vw, 0.92rem);
+  font-size: clamp(0.78rem, 2.4vw, 0.9rem);
   font-weight: 600;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.04em;
   line-height: 1.35;
-  padding: 0.85rem 0.5rem 0.95rem;
+  padding: 0.9rem 0.5rem 1rem;
   cursor: pointer;
   position: relative;
   transition: color 0.25s var(--ease);
@@ -861,10 +867,10 @@ a {
 .compare-tab::after {
   content: "";
   position: absolute;
-  left: 12%;
-  right: 12%;
+  left: 18%;
+  right: 18%;
   bottom: -1px;
-  height: 2px;
+  height: 1.5px;
   background: transparent;
   transition: background 0.25s var(--ease);
 }
@@ -874,11 +880,11 @@ a {
 }
 
 .compare-tab.is-active {
-  color: var(--accent-deep);
+  color: var(--ink);
 }
 
 .compare-tab.is-active::after {
-  background: var(--accent);
+  background: var(--accent-deep);
 }
 
 .compare-tab:focus-visible {
@@ -892,18 +898,19 @@ a {
   }
 
   .compare-tab {
-    padding: 0.75rem 0.35rem 0.85rem;
-    font-size: 0.76rem;
+    padding: 0.75rem 0.3rem 0.85rem;
+    font-size: 0.74rem;
+    letter-spacing: 0.02em;
   }
 
   .compare-tab::after {
-    left: 8%;
-    right: 8%;
+    left: 10%;
+    right: 10%;
   }
 }
 
 .compare-block {
-  margin-bottom: 2rem;
+  margin-bottom: 1.75rem;
 }
 
 .compare-block[hidden] {
@@ -912,23 +919,18 @@ a {
 
 .compare-block-title {
   font-family: var(--font-display);
-  font-size: clamp(1.15rem, 2.5vw, 1.45rem);
-  font-weight: 700;
-  margin-bottom: 1.25rem;
+  font-size: clamp(1.05rem, 2.2vw, 1.28rem);
+  font-weight: 600;
+  margin-bottom: 1.1rem;
   line-height: 1.45;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.06em;
   color: var(--ink);
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
+  text-align: center;
+  display: block;
 }
 
 .compare-block-title::before {
-  content: "";
-  width: 1.65rem;
-  height: 1px;
-  background: linear-gradient(90deg, var(--accent), transparent);
-  flex-shrink: 0;
+  display: none;
 }
 
 .compare-scroll-hint {
@@ -961,14 +963,13 @@ a {
   width: 100%;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-  padding: 0.15rem;
-  border-radius: 1.15rem;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 252, 248, 0.96));
-  border: 1px solid rgba(143, 79, 44, 0.12);
+  padding: 0;
+  border-radius: 0.35rem;
+  background: #fff;
+  border: 1px solid rgba(89, 48, 24, 0.1);
   box-shadow:
-    0 1px 2px rgba(89, 48, 24, 0.03),
-    0 18px 40px rgba(89, 48, 24, 0.07);
+    0 1px 0 rgba(255, 255, 255, 0.8) inset,
+    0 12px 36px rgba(89, 48, 24, 0.06);
 }
 
 .matrix-table {
@@ -978,16 +979,16 @@ a {
   border-collapse: separate;
   border-spacing: 0;
   font-family: var(--font-jp);
-  font-size: 0.86rem;
+  font-size: 0.84rem;
   line-height: 1.7;
   color: var(--ink-soft);
-  background: transparent;
+  background: #fff;
 }
 
 .matrix-table th,
 .matrix-table td {
-  border-right: 1px solid rgba(143, 79, 44, 0.08);
-  border-bottom: 1px solid rgba(143, 79, 44, 0.08);
+  border-right: 1px solid rgba(89, 48, 24, 0.07);
+  border-bottom: 1px solid rgba(89, 48, 24, 0.07);
   padding: 0.95rem 1rem;
   vertical-align: middle;
   text-align: left;
@@ -1004,14 +1005,14 @@ a {
 }
 
 .matrix-table thead th {
-  background: linear-gradient(180deg, #f7efe8, #f1e4d8);
+  background: #faf8f5;
   color: var(--ink);
   font-weight: 700;
   text-align: center;
   vertical-align: middle;
-  font-size: 0.9rem;
-  letter-spacing: 0.02em;
-  border-bottom: 1px solid rgba(143, 79, 44, 0.14);
+  font-size: 0.86rem;
+  letter-spacing: 0.04em;
+  border-bottom: 1px solid rgba(89, 48, 24, 0.12);
   padding: 1.05rem 0.85rem;
 }
 
@@ -1020,8 +1021,8 @@ a {
   position: sticky;
   left: 0;
   z-index: 5;
-  background: linear-gradient(180deg, #f7efe8, #f1e4d8);
-  box-shadow: 6px 0 12px -8px rgba(89, 48, 24, 0.22);
+  background: #faf8f5;
+  box-shadow: 6px 0 14px -10px rgba(89, 48, 24, 0.18);
 }
 
 .matrix-table thead th:nth-child(2),
@@ -1040,98 +1041,103 @@ a {
 }
 
 .matrix-table thead .ours-head {
-  background: linear-gradient(165deg, #f4e4d6 0%, #e8d0bc 100%);
-  color: var(--accent-deep);
+  background: #2c211c;
+  color: #f7efe6;
   position: relative;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.45);
+  letter-spacing: 0.05em;
+  box-shadow: none;
 }
 
 .matrix-table thead .ours-head::after {
   content: "";
   position: absolute;
-  left: 18%;
-  right: 18%;
+  left: 0;
+  right: 0;
   bottom: 0;
   height: 2px;
-  background: linear-gradient(90deg, transparent, var(--accent), transparent);
-  opacity: 0.85;
+  background: linear-gradient(90deg, transparent 8%, #c4895c 50%, transparent 92%);
+  opacity: 1;
 }
 
+/* Group rail: 学習 */
 .matrix-table .cat {
-  background: linear-gradient(180deg, #faf7f4, #f5efe9);
-  color: var(--ink);
+  background: #f3eee8;
+  color: rgba(17, 17, 17, 0.55);
   font-weight: 700;
   text-align: center;
   vertical-align: middle;
-  letter-spacing: 0.02em;
-  writing-mode: horizontal-tb;
-  width: 4rem;
-  min-width: 4rem;
-  max-width: 4rem;
-  padding: 0.85rem 0.25rem;
-  font-size: 0.76rem;
-  line-height: 1.45;
+  letter-spacing: 0.18em;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  width: 2.75rem;
+  min-width: 2.75rem;
+  max-width: 2.75rem;
+  padding: 1rem 0.2rem;
+  font-size: 0.72rem;
+  line-height: 1.2;
   position: sticky;
   left: 0;
   z-index: 3;
-  box-shadow: 6px 0 12px -8px rgba(89, 48, 24, 0.18);
+  box-shadow: 6px 0 14px -10px rgba(89, 48, 24, 0.16);
+  border-right: 1px solid rgba(89, 48, 24, 0.08);
 }
 
-.matrix-table .cat[colspan] {
+/* Unified row labels: 形態 / 外部連携 / 費用 etc. */
+.matrix-table .sub {
+  background: #f7f4f0;
+  color: var(--ink);
+  font-weight: 700;
+  white-space: nowrap;
+  width: 5.25rem;
+  min-width: 5.25rem;
+  max-width: 5.25rem;
+  font-size: 0.78rem;
+  text-align: center;
+  letter-spacing: 0.06em;
+  padding: 0.95rem 0.4rem;
+  position: sticky;
+  left: 2.75rem;
+  z-index: 2;
+  box-shadow: 6px 0 14px -10px rgba(89, 48, 24, 0.14);
+}
+
+.matrix-table .sub[colspan] {
+  left: 0;
   width: 8rem;
   min-width: 8rem;
   max-width: 8rem;
-  padding: 1.05rem 0.55rem;
-  text-align: center;
-  letter-spacing: 0.06em;
-  font-size: 0.82rem;
   z-index: 4;
+  white-space: normal;
+  box-shadow: 6px 0 14px -10px rgba(89, 48, 24, 0.18);
 }
 
 .matrix-table .cat-note {
   display: block;
-  margin-top: 0.3rem;
-  font-size: 0.72em;
+  margin-top: 0.25rem;
+  font-size: 0.7em;
   font-weight: 500;
   letter-spacing: 0.02em;
   color: var(--muted);
   white-space: normal;
 }
 
-.matrix-table .sub {
-  background: rgba(251, 247, 243, 0.98);
-  color: var(--ink);
-  font-weight: 700;
-  white-space: nowrap;
-  width: 4rem;
-  min-width: 4rem;
-  max-width: 4rem;
-  font-size: 0.76rem;
-  text-align: center;
-  letter-spacing: 0.02em;
-  padding-left: 0.3rem;
-  padding-right: 0.3rem;
-  position: sticky;
-  left: 4rem;
-  z-index: 2;
-  box-shadow: 6px 0 12px -8px rgba(89, 48, 24, 0.16);
-}
-
 .matrix-table td {
-  background: rgba(255, 255, 255, 0.55);
+  background: #fff;
   vertical-align: top;
 }
 
 .matrix-table tbody tr:hover td {
-  background: rgba(255, 250, 246, 0.9);
+  background: #fcfaf8;
 }
 
+/* Kepty column: clear contrast against white cells */
 .matrix-table td:last-child {
-  background: linear-gradient(180deg, rgba(251, 246, 241, 0.75), rgba(245, 236, 227, 0.55));
+  background: #f8f1e9;
+  box-shadow: inset 3px 0 0 0 #b56a3f;
 }
 
 .matrix-table tbody tr:hover td:last-child {
-  background: linear-gradient(180deg, rgba(248, 240, 232, 0.95), rgba(242, 230, 218, 0.8));
+  background: #f3e8dc;
 }
 
 .matrix-table .cell-center {
@@ -1146,6 +1152,11 @@ a {
   font-weight: 600;
   letter-spacing: 0.01em;
   white-space: nowrap;
+}
+
+.matrix-table td:last-child.cell-price {
+  color: var(--accent-deep);
+  font-weight: 700;
 }
 
 .matrix-table .cell-list {
@@ -1168,15 +1179,15 @@ a {
   position: absolute;
   left: 0;
   top: 0.72em;
-  width: 0.28rem;
-  height: 0.28rem;
+  width: 0.22rem;
+  height: 0.22rem;
   border-radius: 50%;
-  background: rgba(143, 79, 44, 0.45);
+  background: rgba(89, 48, 24, 0.35);
   transform: translateY(-50%);
 }
 
 .matrix-table td:last-child .cell-list li::before {
-  background: var(--accent);
+  background: var(--accent-deep);
 }
 
 .matrix-table .cell-list li:has(.hl)::before {
@@ -1205,13 +1216,15 @@ a {
 }
 
 .compare-footnote {
-  margin-top: 0.75rem;
+  margin-top: 1rem;
   margin-bottom: 2rem;
   font-family: var(--font-jp);
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   font-weight: 500;
-  color: #8a8a8a;
+  color: rgba(107, 107, 107, 0.9);
   line-height: 1.7;
+  text-align: center;
+  letter-spacing: 0.02em;
 }
 
 /* Mobile: stacked comparison cards (no horizontal scroll) */
@@ -1221,8 +1234,8 @@ a {
   }
 
   .compare-block-title {
-    margin-bottom: 0.85rem;
-    font-size: 1.05rem;
+    margin-bottom: 0.9rem;
+    font-size: 1rem;
   }
 
   .compare-scroll {
@@ -1240,6 +1253,7 @@ a {
     table-layout: auto;
     border-collapse: collapse;
     font-size: 0.82rem;
+    background: transparent;
   }
 
   .matrix-table thead {
@@ -1265,11 +1279,12 @@ a {
   }
 
   .matrix-table tr {
-    margin-bottom: 0.7rem;
-    border: 1px solid rgba(143, 79, 44, 0.1);
-    border-radius: 0.85rem;
+    margin-bottom: 0.75rem;
+    border: 1px solid rgba(89, 48, 24, 0.1);
+    border-radius: 0.35rem;
     overflow: hidden;
     background: #fff;
+    box-shadow: 0 8px 24px rgba(89, 48, 24, 0.04);
   }
 
   .matrix-table th,
@@ -1280,6 +1295,7 @@ a {
     box-shadow: none;
     position: static;
     writing-mode: horizontal-tb;
+    text-orientation: mixed;
   }
 
   .matrix-table .cat[rowspan] {
@@ -1287,19 +1303,19 @@ a {
   }
 
   .matrix-table .sub,
-  .matrix-table .cat[colspan] {
+  .matrix-table .sub[colspan] {
+    left: auto;
     width: 100%;
-    padding: 0.55rem 0.85rem;
+    min-width: 0;
+    max-width: none;
+    padding: 0.6rem 0.95rem;
     text-align: left;
-    letter-spacing: 0.04em;
-    font-size: 0.78rem;
-    background: #f6eee7;
-    border-bottom: 1px solid rgba(143, 79, 44, 0.08);
-  }
-
-  .matrix-table .cat[colspan] {
-    padding: 0.6rem 0.85rem;
-    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    font-size: 0.76rem;
+    background: #f3eee8;
+    color: var(--ink);
+    border-bottom: 1px solid rgba(89, 48, 24, 0.08);
+    white-space: normal;
   }
 
   .matrix-table .cat-note {
@@ -1310,9 +1326,9 @@ a {
 
   .matrix-table td {
     position: relative;
-    padding: 0.65rem 0.85rem 0.65rem 7rem;
+    padding: 0.7rem 0.95rem 0.7rem 7rem;
     background: #fff;
-    border-top: 1px solid rgba(143, 79, 44, 0.07);
+    border-top: 1px solid rgba(89, 48, 24, 0.06);
     vertical-align: top;
     text-align: left;
   }
@@ -1320,19 +1336,20 @@ a {
   .matrix-table td::before {
     content: attr(data-label);
     position: absolute;
-    left: 0.85rem;
-    top: 0.7rem;
-    width: 5.5rem;
+    left: 0.95rem;
+    top: 0.75rem;
+    width: 5.4rem;
     margin: 0;
-    font-size: 0.68rem;
+    font-size: 0.66rem;
     font-weight: 700;
     letter-spacing: 0.04em;
-    color: var(--muted);
+    color: rgba(107, 107, 107, 0.95);
     line-height: 1.4;
   }
 
   .matrix-table td:last-child {
-    background: rgba(248, 240, 232, 0.7);
+    background: #f8f1e9;
+    box-shadow: inset 3px 0 0 0 #b56a3f;
   }
 
   .matrix-table td:last-child::before {
@@ -1344,7 +1361,7 @@ a {
   }
 
   .matrix-table tbody tr:hover td:last-child {
-    background: rgba(248, 240, 232, 0.7);
+    background: #f8f1e9;
   }
 
   .matrix-table .cell-center,
