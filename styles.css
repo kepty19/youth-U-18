@@ -593,6 +593,34 @@ a {
   line-height: 1.7;
 }
 
+.inline-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.4rem;
+  margin-top: 0.95rem;
+  padding: 0.7rem 0.85rem 0.75rem;
+  font-family: var(--font-jp);
+  font-size: 0.78rem;
+  font-weight: 500;
+  line-height: 1.65;
+  color: var(--muted);
+  background: rgba(143, 79, 44, 0.045);
+  border-left: 2px solid rgba(143, 79, 44, 0.28);
+  border-radius: 0 0.55rem 0.55rem 0;
+}
+
+.inline-note-mark {
+  flex-shrink: 0;
+  color: var(--accent);
+  font-weight: 700;
+  line-height: 1.65;
+}
+
+.section-inline-note {
+  margin-top: 1.75rem;
+  max-width: 36rem;
+}
+
 .solution-block {
   display: grid;
   gap: 1rem;
@@ -851,7 +879,7 @@ a {
   animation: compare-pulse 1.5s ease-in-out infinite;
 }
 
-@media (max-width: 900px) {
+@media (min-width: 901px) and (max-width: 1100px) {
   .compare-scroll-hint {
     display: inline-flex;
   }
@@ -1112,6 +1140,147 @@ a {
   font-weight: 500;
   color: #8a8a8a;
   line-height: 1.7;
+}
+
+/* Mobile: stacked comparison cards (no horizontal scroll) */
+@media (max-width: 900px) {
+  .compare-scroll-hint {
+    display: none;
+  }
+
+  .compare-scroll {
+    overflow: visible;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .matrix-table {
+    min-width: 0;
+    width: 100%;
+    table-layout: auto;
+    border-collapse: collapse;
+    font-size: 0.84rem;
+  }
+
+  .matrix-table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .matrix-table tbody,
+  .matrix-table tr,
+  .matrix-table th,
+  .matrix-table td {
+    display: block;
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+  }
+
+  .matrix-table tr {
+    margin-bottom: 0.85rem;
+    border: 1px solid rgba(143, 79, 44, 0.12);
+    border-radius: 1rem;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow:
+      0 1px 2px rgba(89, 48, 24, 0.03),
+      0 10px 24px rgba(89, 48, 24, 0.05);
+  }
+
+  .matrix-table th,
+  .matrix-table td {
+    border: none;
+    border-right: none;
+    border-bottom: none;
+    box-shadow: none;
+    position: static;
+    writing-mode: horizontal-tb;
+  }
+
+  .matrix-table .cat[rowspan] {
+    display: none;
+  }
+
+  .matrix-table .sub,
+  .matrix-table .cat[colspan] {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    text-align: left;
+    letter-spacing: 0.04em;
+    font-size: 0.82rem;
+    background: linear-gradient(180deg, #f7efe8, #f1e4d8);
+    border-bottom: 1px solid rgba(143, 79, 44, 0.1);
+  }
+
+  .matrix-table .cat[colspan] {
+    padding: 0.85rem 1rem;
+    font-size: 0.84rem;
+  }
+
+  .matrix-table .cat-note {
+    display: inline;
+    margin-top: 0;
+    margin-left: 0.25rem;
+  }
+
+  .matrix-table td {
+    padding: 0.85rem 1rem 0.95rem;
+    background: #fff;
+    border-top: 1px solid rgba(143, 79, 44, 0.08);
+    vertical-align: top;
+    text-align: left;
+  }
+
+  .matrix-table td::before {
+    content: attr(data-label);
+    display: block;
+    margin-bottom: 0.4rem;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+  }
+
+  .matrix-table td:last-child {
+    background: linear-gradient(180deg, rgba(251, 246, 241, 0.95), rgba(245, 236, 227, 0.72));
+  }
+
+  .matrix-table td:last-child::before {
+    color: var(--accent-deep);
+  }
+
+  .matrix-table tbody tr:hover td {
+    background: #fff;
+  }
+
+  .matrix-table tbody tr:hover td:last-child {
+    background: linear-gradient(180deg, rgba(251, 246, 241, 0.95), rgba(245, 236, 227, 0.72));
+  }
+
+  .matrix-table .cell-center,
+  .matrix-table .cell-price {
+    text-align: left;
+    white-space: normal;
+  }
+
+  .matrix-table .cell-price {
+    font-size: 0.95rem;
+  }
+
+  .matrix-table .cell-list {
+    gap: 0.3rem;
+  }
 }
 
 @keyframes compare-pulse {

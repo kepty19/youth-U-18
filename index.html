@@ -222,8 +222,9 @@
             </article>
           </div>
 
-          <p class="section-note reveal" data-reveal>
-            ※プロ選手との直接的な接点・関与はございません。
+          <p class="inline-note section-inline-note reveal" data-reveal role="note">
+            <span class="inline-note-mark" aria-hidden="true">※</span>
+            <span>プロ選手との直接的な接点・関与はございません。</span>
           </p>
         </div>
       </section>
@@ -297,7 +298,11 @@
               <div class="overview-body">
                 <h3>プロ選手との間接接点の存在</h3>
                 <p>
-                  プロ選手向け英語コーチングサービス側のコンテンツ配信やWebアプリの開放など、<span class="em">憧れの選手達と同じ学習内容に触れる機会があります</span>。その些細な刺激の連続が、<span class="em">毎日の学習を止めないエンジン</span>になります。<br>（※プロ選手との直接的な接点・関与はございません。）
+                  プロ選手向け英語コーチングサービス側のコンテンツ配信やWebアプリの開放など、<span class="em">憧れの選手達と同じ学習内容に触れる機会があります</span>。その些細な刺激の連続が、<span class="em">毎日の学習を止めないエンジン</span>になります。
+                </p>
+                <p class="inline-note" role="note">
+                  <span class="inline-note-mark" aria-hidden="true">※</span>
+                  <span>プロ選手との直接的な接点・関与はございません。</span>
                 </p>
               </div>
             </article>
@@ -339,7 +344,7 @@
             <h3 class="compare-block-title">【小学5〜6年生】学習塾との比較</h3>
             <p class="compare-scroll-hint" aria-hidden="true"><span class="compare-scroll-dot"></span>scroll→</p>
             <div class="compare-scroll">
-                            <table class="matrix-table">
+              <table class="matrix-table">
                 <thead>
                   <tr>
                     <th colspan="2">項目</th>
@@ -352,19 +357,19 @@
                   <tr>
                     <th class="cat" rowspan="7">学習</th>
                     <th class="sub">目的</th>
-                    <td>
+                    <td data-label="集団塾">
                       <ul class="cell-list">
                         <li>基礎英語力の向上</li>
                         <li>試験/受験の対策</li>
                       </ul>
                     </td>
-                    <td>
+                    <td data-label="個別塾">
                       <ul class="cell-list">
                         <li>基礎英語力の向上</li>
                         <li>試験/受験の対策</li>
                       </ul>
                     </td>
-                    <td>
+                    <td data-label="Kepty English">
                       <span class="cell-lead">将来、世界で活躍する人材の育成</span>
                       <ul class="cell-list">
                         <li>実践的な英会話力の強化</li>
@@ -375,29 +380,29 @@
                   </tr>
                   <tr>
                     <th class="sub">形態</th>
-                    <td class="cell-center">一律</td>
-                    <td class="cell-center">個別</td>
-                    <td class="cell-center">個別</td>
+                    <td class="cell-center" data-label="集団塾">一律</td>
+                    <td class="cell-center" data-label="個別塾">個別</td>
+                    <td class="cell-center" data-label="Kepty English">個別</td>
                   </tr>
                   <tr>
                     <th class="sub">方向性</th>
-                    <td class="cell-center">他律学習</td>
-                    <td class="cell-center">他律学習</td>
-                    <td class="cell-center"><span class="hl">自律学習</span></td>
+                    <td class="cell-center" data-label="集団塾">他律学習</td>
+                    <td class="cell-center" data-label="個別塾">他律学習</td>
+                    <td class="cell-center" data-label="Kepty English"><span class="hl">自律学習</span></td>
                   </tr>
                   <tr>
                     <th class="sub">特徴</th>
-                    <td>
+                    <td data-label="集団塾">
                       <ul class="cell-list">
                         <li>仲間と同じペースで学習を進める</li>
                       </ul>
                     </td>
-                    <td>
+                    <td data-label="個別塾">
                       <ul class="cell-list">
                         <li>個々の得意/苦手に焦点を当てて、自分のペースで学習を進める</li>
                       </ul>
                     </td>
-                    <td>
+                    <td data-label="Kepty English">
                       <ul class="cell-list">
                         <li><span class="hl">「実践的な英会話力」と「自律心」の両者を同時に育む</span></li>
                       </ul>
@@ -405,17 +410,17 @@
                   </tr>
                   <tr>
                     <th class="sub">範囲</th>
-                    <td>
+                    <td data-label="集団塾">
                       <ul class="cell-list">
                         <li>机上/受験英語が中心<span class="cell-note">（リーディング、ライティング）</span></li>
                       </ul>
                     </td>
-                    <td>
+                    <td data-label="個別塾">
                       <ul class="cell-list">
                         <li>机上/受験英語が中心<span class="cell-note">（リーディング、ライティング）</span></li>
                       </ul>
                     </td>
-                    <td>
+                    <td data-label="Kepty English">
                       <ul class="cell-list">
                         <li><span class="hl">机上/受験英語と実践的英会話の両方</span><span class="cell-note">（<span class="hl">リスニング、スピーキング</span>、リーディング、ライティング）</span></li>
                       </ul>
@@ -423,21 +428,21 @@
                   </tr>
                   <tr>
                     <th class="sub">頻度</th>
-                    <td class="cell-center">週2回（夕方〜夜）</td>
-                    <td class="cell-center">週2回（夕方〜夜）</td>
-                    <td class="cell-center"><span class="hl">毎日</span>（24時間いつでも）</td>
+                    <td class="cell-center" data-label="集団塾">週2回（夕方〜夜）</td>
+                    <td class="cell-center" data-label="個別塾">週2回（夕方〜夜）</td>
+                    <td class="cell-center" data-label="Kepty English"><span class="hl">毎日</span>（24時間いつでも）</td>
                   </tr>
                   <tr>
                     <th class="sub">場所</th>
-                    <td class="cell-center">教室中心</td>
-                    <td class="cell-center">教室中心</td>
-                    <td class="cell-center">オンライン（週次定例あり）</td>
+                    <td class="cell-center" data-label="集団塾">教室中心</td>
+                    <td class="cell-center" data-label="個別塾">教室中心</td>
+                    <td class="cell-center" data-label="Kepty English">オンライン（週次定例あり）</td>
                   </tr>
                   <tr>
                     <th class="cat" colspan="2">外部連携</th>
-                    <td class="cell-center">なし</td>
-                    <td class="cell-center">なし</td>
-                    <td>
+                    <td class="cell-center" data-label="集団塾">なし</td>
+                    <td class="cell-center" data-label="個別塾">なし</td>
+                    <td data-label="Kepty English">
                       <span class="cell-lead">プロサッカー選手との間接接点</span>
                       <ul class="cell-list">
                         <li>プロ選手側の「現在の利用者数」のシェア</li>
@@ -448,9 +453,9 @@
                   </tr>
                   <tr>
                     <th class="cat" colspan="2">費用<br /><span class="cat-note">（6ヶ月換算）</span></th>
-                    <td class="cell-price">約15万〜25万円</td>
-                    <td class="cell-price">約23万〜36万円</td>
-                    <td class="cell-price">29.8万円</td>
+                    <td class="cell-price" data-label="集団塾">約15万〜25万円</td>
+                    <td class="cell-price" data-label="個別塾">約23万〜36万円</td>
+                    <td class="cell-price" data-label="Kepty English">29.8万円</td>
                   </tr>
                 </tbody>
               </table>
@@ -462,7 +467,7 @@
             <h3 class="compare-block-title">【中学生〜高校生】学習塾との比較</h3>
             <p class="compare-scroll-hint" aria-hidden="true"><span class="compare-scroll-dot"></span>scroll→</p>
             <div class="compare-scroll">
-                            <table class="matrix-table">
+              <table class="matrix-table">
                 <thead>
                   <tr>
                     <th colspan="2">項目</th>
@@ -475,19 +480,19 @@
                   <tr>
                     <th class="cat" rowspan="7">学習</th>
                     <th class="sub">目的</th>
-                    <td>
+                    <td data-label="集団塾">
                       <ul class="cell-list">
                         <li>基礎学力の向上</li>
                         <li>試験/受験の対策</li>
                       </ul>
                     </td>
-                    <td>
+                    <td data-label="個別塾">
                       <ul class="cell-list">
                         <li>基礎学力の向上</li>
                         <li>試験/受験の対策</li>
                       </ul>
                     </td>
-                    <td>
+                    <td data-label="Kepty English">
                       <span class="cell-lead">将来、世界で活躍する人材の育成</span>
                       <ul class="cell-list">
                         <li>実践的な英会話力の強化</li>
@@ -498,29 +503,29 @@
                   </tr>
                   <tr>
                     <th class="sub">形態</th>
-                    <td class="cell-center">一律</td>
-                    <td class="cell-center">個別</td>
-                    <td class="cell-center">個別</td>
+                    <td class="cell-center" data-label="集団塾">一律</td>
+                    <td class="cell-center" data-label="個別塾">個別</td>
+                    <td class="cell-center" data-label="Kepty English">個別</td>
                   </tr>
                   <tr>
                     <th class="sub">方向性</th>
-                    <td class="cell-center">他律学習</td>
-                    <td class="cell-center">他律学習</td>
-                    <td class="cell-center"><span class="hl">自律学習</span></td>
+                    <td class="cell-center" data-label="集団塾">他律学習</td>
+                    <td class="cell-center" data-label="個別塾">他律学習</td>
+                    <td class="cell-center" data-label="Kepty English"><span class="hl">自律学習</span></td>
                   </tr>
                   <tr>
                     <th class="sub">特徴</th>
-                    <td>
+                    <td data-label="集団塾">
                       <ul class="cell-list">
                         <li>仲間と同じペースで学習を進める</li>
                       </ul>
                     </td>
-                    <td>
+                    <td data-label="個別塾">
                       <ul class="cell-list">
                         <li>個々の得意/苦手に焦点を当てて、自分のペースで学習を進める</li>
                       </ul>
                     </td>
-                    <td>
+                    <td data-label="Kepty English">
                       <ul class="cell-list">
                         <li><span class="hl">「実践的な英会話力」と「自律心」の両者を同時に育む</span></li>
                       </ul>
@@ -528,17 +533,17 @@
                   </tr>
                   <tr>
                     <th class="sub">範囲</th>
-                    <td>
+                    <td data-label="集団塾">
                       <ul class="cell-list">
                         <li>机上/受験英語が中心<span class="cell-note">（リーディング、ライティング）</span></li>
                       </ul>
                     </td>
-                    <td>
+                    <td data-label="個別塾">
                       <ul class="cell-list">
                         <li>机上/受験英語が中心<span class="cell-note">（リーディング、ライティング）</span></li>
                       </ul>
                     </td>
-                    <td>
+                    <td data-label="Kepty English">
                       <ul class="cell-list">
                         <li><span class="hl">机上/受験英語と実践的英会話の両方</span><span class="cell-note">（<span class="hl">リスニング、スピーキング</span>、リーディング、ライティング）</span></li>
                       </ul>
@@ -546,21 +551,21 @@
                   </tr>
                   <tr>
                     <th class="sub">頻度</th>
-                    <td class="cell-center">週2回（夕方〜夜）</td>
-                    <td class="cell-center">週2回（夕方〜夜）</td>
-                    <td class="cell-center"><span class="hl">毎日</span>（24時間いつでも）</td>
+                    <td class="cell-center" data-label="集団塾">週2回（夕方〜夜）</td>
+                    <td class="cell-center" data-label="個別塾">週2回（夕方〜夜）</td>
+                    <td class="cell-center" data-label="Kepty English"><span class="hl">毎日</span>（24時間いつでも）</td>
                   </tr>
                   <tr>
                     <th class="sub">場所</th>
-                    <td class="cell-center">教室中心</td>
-                    <td class="cell-center">教室中心</td>
-                    <td class="cell-center">オンライン（週次定例あり）</td>
+                    <td class="cell-center" data-label="集団塾">教室中心</td>
+                    <td class="cell-center" data-label="個別塾">教室中心</td>
+                    <td class="cell-center" data-label="Kepty English">オンライン（週次定例あり）</td>
                   </tr>
                   <tr>
                     <th class="cat" colspan="2">外部連携</th>
-                    <td class="cell-center">なし</td>
-                    <td class="cell-center">なし</td>
-                    <td>
+                    <td class="cell-center" data-label="集団塾">なし</td>
+                    <td class="cell-center" data-label="個別塾">なし</td>
+                    <td data-label="Kepty English">
                       <span class="cell-lead">プロサッカー選手との間接接点</span>
                       <ul class="cell-list">
                         <li>プロ選手側の「現在の利用者数」のシェア</li>
@@ -571,9 +576,9 @@
                   </tr>
                   <tr>
                     <th class="cat" colspan="2">費用<br /><span class="cat-note">（6ヶ月換算）</span></th>
-                    <td class="cell-price">約20万〜35万円</td>
-                    <td class="cell-price">約30万〜50万円</td>
-                    <td class="cell-price">29.8万円</td>
+                    <td class="cell-price" data-label="集団塾">約20万〜35万円</td>
+                    <td class="cell-price" data-label="個別塾">約30万〜50万円</td>
+                    <td class="cell-price" data-label="Kepty English">29.8万円</td>
                   </tr>
                 </tbody>
               </table>
@@ -585,7 +590,7 @@
             <h3 class="compare-block-title">【全年代】英会話スクールとの比較</h3>
             <p class="compare-scroll-hint" aria-hidden="true"><span class="compare-scroll-dot"></span>scroll→</p>
             <div class="compare-scroll">
-                            <table class="matrix-table">
+              <table class="matrix-table">
                 <thead>
                   <tr>
                     <th colspan="2">項目</th>
@@ -598,19 +603,19 @@
                   <tr>
                     <th class="cat" rowspan="7">学習</th>
                     <th class="sub">目的</th>
-                    <td>
+                    <td data-label="グループ">
                       <ul class="cell-list">
                         <li>生きた英語に触れる機会の最大化</li>
                         <li>実践的な英会話力の強化</li>
                       </ul>
                     </td>
-                    <td>
+                    <td data-label="マンツーマン">
                       <ul class="cell-list">
                         <li>生きた英語に触れる機会の最大化</li>
                         <li>実践的な英会話力の強化</li>
                       </ul>
                     </td>
-                    <td>
+                    <td data-label="Kepty English">
                       <span class="cell-lead">将来、世界で活躍する人材の育成</span>
                       <ul class="cell-list">
                         <li>実践的な英会話力の強化</li>
@@ -621,29 +626,29 @@
                   </tr>
                   <tr>
                     <th class="sub">形態</th>
-                    <td class="cell-center">一律</td>
-                    <td class="cell-center">個別</td>
-                    <td class="cell-center">個別</td>
+                    <td class="cell-center" data-label="グループ">一律</td>
+                    <td class="cell-center" data-label="マンツーマン">個別</td>
+                    <td class="cell-center" data-label="Kepty English">個別</td>
                   </tr>
                   <tr>
                     <th class="sub">方向性</th>
-                    <td class="cell-center">他律学習</td>
-                    <td class="cell-center">他律学習</td>
-                    <td class="cell-center"><span class="hl">自律学習</span></td>
+                    <td class="cell-center" data-label="グループ">他律学習</td>
+                    <td class="cell-center" data-label="マンツーマン">他律学習</td>
+                    <td class="cell-center" data-label="Kepty English"><span class="hl">自律学習</span></td>
                   </tr>
                   <tr>
                     <th class="sub">特徴</th>
-                    <td>
+                    <td data-label="グループ">
                       <ul class="cell-list">
                         <li>仲間と同じペースで学習を進める</li>
                       </ul>
                     </td>
-                    <td>
+                    <td data-label="マンツーマン">
                       <ul class="cell-list">
                         <li>個々の得意/苦手に焦点を当てて、自分のペースで学習を進める</li>
                       </ul>
                     </td>
-                    <td>
+                    <td data-label="Kepty English">
                       <ul class="cell-list">
                         <li><span class="hl">「実践的な英会話力」と「自律心」の両者を同時に育む</span></li>
                       </ul>
@@ -651,17 +656,17 @@
                   </tr>
                   <tr>
                     <th class="sub">範囲</th>
-                    <td>
+                    <td data-label="グループ">
                       <ul class="cell-list">
                         <li>実践的英会話が中心<span class="cell-note">（リスニング、スピーキング）</span></li>
                       </ul>
                     </td>
-                    <td>
+                    <td data-label="マンツーマン">
                       <ul class="cell-list">
                         <li>実践的英会話が中心<span class="cell-note">（リスニング、スピーキング）</span></li>
                       </ul>
                     </td>
-                    <td>
+                    <td data-label="Kepty English">
                       <ul class="cell-list">
                         <li><span class="hl">机上/受験英語と実践的英会話の両方</span><span class="cell-note">（<span class="hl">リスニング、スピーキング</span>、リーディング、ライティング）</span></li>
                       </ul>
@@ -669,21 +674,21 @@
                   </tr>
                   <tr>
                     <th class="sub">頻度</th>
-                    <td class="cell-center">週2回（夕方〜夜）</td>
-                    <td class="cell-center">週2回（夕方〜夜）</td>
-                    <td class="cell-center"><span class="hl">毎日</span>（24時間いつでも）</td>
+                    <td class="cell-center" data-label="グループ">週2回（夕方〜夜）</td>
+                    <td class="cell-center" data-label="マンツーマン">週2回（夕方〜夜）</td>
+                    <td class="cell-center" data-label="Kepty English"><span class="hl">毎日</span>（24時間いつでも）</td>
                   </tr>
                   <tr>
                     <th class="sub">場所</th>
-                    <td class="cell-center">教室中心</td>
-                    <td class="cell-center">教室中心</td>
-                    <td class="cell-center">オンライン（週次定例あり）</td>
+                    <td class="cell-center" data-label="グループ">教室中心</td>
+                    <td class="cell-center" data-label="マンツーマン">教室中心</td>
+                    <td class="cell-center" data-label="Kepty English">オンライン（週次定例あり）</td>
                   </tr>
                   <tr>
                     <th class="cat" colspan="2">外部連携</th>
-                    <td class="cell-center">−</td>
-                    <td class="cell-center">なし</td>
-                    <td>
+                    <td class="cell-center" data-label="グループ">−</td>
+                    <td class="cell-center" data-label="マンツーマン">なし</td>
+                    <td data-label="Kepty English">
                       <span class="cell-lead">プロサッカー選手との間接接点</span>
                       <ul class="cell-list">
                         <li>プロ選手側の「現在の利用者数」のシェア</li>
@@ -694,9 +699,9 @@
                   </tr>
                   <tr>
                     <th class="cat" colspan="2">費用<br /><span class="cat-note">（6ヶ月換算）</span></th>
-                    <td class="cell-price">約14万〜22万円</td>
-                    <td class="cell-price">約33万〜55万円</td>
-                    <td class="cell-price">29.8万円</td>
+                    <td class="cell-price" data-label="グループ">約14万〜22万円</td>
+                    <td class="cell-price" data-label="マンツーマン">約33万〜55万円</td>
+                    <td class="cell-price" data-label="Kepty English">29.8万円</td>
                   </tr>
                 </tbody>
               </table>
