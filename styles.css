@@ -1122,7 +1122,7 @@ a {
   vertical-align: middle;
   font-weight: 600;
   letter-spacing: 0.01em;
-  white-space: nowrap;
+  white-space: normal;
 }
 
 .matrix-table .cell-list {
