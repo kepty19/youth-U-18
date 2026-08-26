@@ -135,20 +135,40 @@
       <section class="section section-warm" id="worries">
         <div class="container narrow">
           <h2 class="section-title reveal" data-reveal>
-            「こんなお悩み、抱えていませんか？」
+            こんなお悩み、抱えていませんか？
           </h2>
           <ul class="worry-list">
             <li class="worry-item reveal" data-reveal>
-              サッカー漬けの毎日で、英語塾に通う時間も体力もない・・
+              <span class="worry-check" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M6.5 12.5 10 16l7.5-8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+              <span>サッカー漬けの毎日で、英語塾に通う時間も体力もない・・</span>
             </li>
             <li class="worry-item reveal" data-reveal>
-              「勉強しなさい」と口を出して喧嘩になり、結局3日坊主で終わる・・
+              <span class="worry-check" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M6.5 12.5 10 16l7.5-8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+              <span>「勉強しなさい」と口を出して喧嘩になり、結局3日坊主で終わる・・</span>
             </li>
             <li class="worry-item reveal" data-reveal>
-              学校の座学や単語暗記ばかりで、実践的な「聴く・話す」が身についていない・・
+              <span class="worry-check" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M6.5 12.5 10 16l7.5-8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+              <span>学校の座学や単語暗記ばかりで、実践的な「聴く・話す」が身についていない・・</span>
             </li>
             <li class="worry-item reveal" data-reveal>
-              将来の海外遠征や進路のために、最低限の英語の備え（セーフティネット）を作っておきたい・・
+              <span class="worry-check" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M6.5 12.5 10 16l7.5-8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+              <span>将来の海外遠征や進路のために、最低限の英語の備え（セーフティネット）を作っておきたい・・</span>
             </li>
           </ul>
         </div>
@@ -198,7 +218,7 @@
           </div>
 
           <p class="closing-line prose-inline reveal" data-reveal>
-            一般的な「週1~2回の塾」や「やらされの英会話」では、「量」も「継続」も決定的に不足してしまうため、成果が出ないのです。
+            一般的な「週1~2回の塾」や「やらされの英会話」では、「量」も「継続」も決定的に不足してしまうため成果が出ないのです。
           </p>
         </div>
       </section>
@@ -207,7 +227,7 @@
       <section class="section section-warm" id="solution">
         <div class="container">
           <h2 class="section-title reveal" data-reveal>
-            Keptyだからこそ実現できる「量」と「継続」を爆発させる仕組み
+            Kepty English U-18だからこそ実現できる「量」と「継続」を爆発させる仕組み
           </h2>
 
           <div class="solution-stack">
@@ -234,43 +254,79 @@
       </section>
 
       <!-- 7. 日々の学習サイクル -->
-      <section class="section section-ink" id="coaching">
+      <section class="section section-cycle" id="coaching">
         <div class="container">
-          <h2 class="section-title light reveal" data-reveal>
+          <h2 class="section-title reveal" data-reveal>
             日々の学習サイクル
           </h2>
 
           <div class="cycle-diagram reveal" data-reveal aria-label="日々の学習サイクル">
-            <div class="cycle-orbit" aria-hidden="true">
-              <span class="cycle-ring">
-                <span class="cycle-arrow"></span>
-                <span class="cycle-arrow"></span>
-                <span class="cycle-arrow"></span>
-                <span class="cycle-arrow"></span>
-              </span>
-              <span class="cycle-core">Cycle</span>
+            <svg class="cycle-loop" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+              <rect class="cycle-loop-track" x="8" y="8" width="84" height="84" rx="12" />
+              <rect class="cycle-loop-flow" x="8" y="8" width="84" height="84" rx="12" />
+              <circle class="cycle-loop-dot" r="2.2" fill="#8f4f2c" stroke="#fff" stroke-width="0.7">
+                <animateMotion
+                  dur="5.5s"
+                  repeatCount="indefinite"
+                  path="M 20,8 H 80 A 12,12 0 0 1 92,20 V 80 A 12,12 0 0 1 80,92 H 20 A 12,12 0 0 1 8,80 V 20 A 12,12 0 0 1 20,8"
+                />
+              </circle>
+            </svg>
+
+            <div class="cycle-hub">
+              <span>Kepty English<br />U-18</span>
             </div>
 
-            <article class="cycle-card cycle-card-top">
+            <div class="cycle-board">
+            <article class="cycle-card cycle-card-tl">
+              <span class="cycle-icon" aria-hidden="true">
+                <svg viewBox="0 0 32 32" fill="none">
+                  <rect x="7" y="6" width="18" height="20" rx="3" stroke="currentColor" stroke-width="1.8" />
+                  <path d="M11 12h10M11 16h10M11 20h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                </svg>
+              </span>
               <span class="cycle-step">01</span>
               <h3>学習プログラムの設計</h3>
               <p>毎日の学習内容を明確にした学習カリキュラムを作成。迷いなく学習を進めていきます。</p>
             </article>
-            <article class="cycle-card cycle-card-right">
+            <article class="cycle-card cycle-card-tr">
+              <span class="cycle-icon" aria-hidden="true">
+                <svg viewBox="0 0 32 32" fill="none">
+                  <rect x="10" y="5" width="12" height="22" rx="3" stroke="currentColor" stroke-width="1.8" />
+                  <circle cx="16" cy="23" r="1.1" fill="currentColor" />
+                  <path d="M13 9h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                </svg>
+              </span>
               <span class="cycle-step">02</span>
               <h3>ICT・アプリでの自学習</h3>
               <p>移動時間や隙間時間を有効活用することで、効率的な学習を実現できます。</p>
             </article>
-            <article class="cycle-card cycle-card-bottom">
+            <article class="cycle-card cycle-card-br">
+              <span class="cycle-icon" aria-hidden="true">
+                <svg viewBox="0 0 32 32" fill="none">
+                  <path d="M8 12c0-4 3.6-7 8-7s8 3 8 7c0 5.5-8 11-8 11S8 17.5 8 12Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
+                  <circle cx="14" cy="12" r="1.1" fill="currentColor" />
+                  <circle cx="18" cy="12" r="1.1" fill="currentColor" />
+                </svg>
+              </span>
               <span class="cycle-step">03</span>
               <h3>オンライン英会話</h3>
               <p>弊社専属のフィリピン人講師との英会話を通して、実践で使える力まで引き上げます。</p>
             </article>
-            <article class="cycle-card cycle-card-left">
+            <article class="cycle-card cycle-card-bl">
+              <span class="cycle-icon" aria-hidden="true">
+                <svg viewBox="0 0 32 32" fill="none">
+                  <circle cx="12" cy="11" r="3.2" stroke="currentColor" stroke-width="1.8" />
+                  <circle cx="20.5" cy="12.2" r="2.6" stroke="currentColor" stroke-width="1.8" />
+                  <path d="M6.8 22.5c.6-3.2 3.2-5 5.8-5s5.2 1.8 5.8 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                  <path d="M17.2 21.6c.7-2.2 2.5-3.5 4.4-3.5 1.7 0 3.3 1 4 2.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                </svg>
+              </span>
               <span class="cycle-step">04</span>
               <h3>専属メンターとのミーティング</h3>
               <p>隔週に一度の専属メンターとのミーティングを通して、継続的に学習エンジンを着火させます。</p>
             </article>
+            </div>
           </div>
         </div>
       </section>
