@@ -817,33 +817,76 @@ a {
 .cycle-board {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .cycle-loop {
   display: none;
 }
 
-.cycle-hub {
-  width: 9.5rem;
-  height: 9.5rem;
-  margin: 0 auto 1.1rem;
-  display: grid;
-  place-items: center;
-  text-align: center;
+.cycle-spine {
+  display: block;
+  position: absolute;
+  left: calc(1.2rem + 1.35rem);
+  top: 2.45rem;
+  bottom: 2.45rem;
+  width: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.cycle-spine-track {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  border-left: 2px dashed rgba(181, 106, 63, 0.42);
+  transform: translateX(-1px);
+}
+
+.cycle-spine-dot {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 9px;
+  height: 9px;
   border-radius: 50%;
-  background:
-    radial-gradient(circle at 32% 28%, #fff, #f8ece3 58%, #f0d8c6 100%);
-  border: 3px solid rgba(181, 106, 63, 0.28);
-  box-shadow:
-    0 8px 24px rgba(143, 79, 44, 0.12),
-    0 0 0 10px rgba(255, 255, 255, 0.55);
-  color: var(--accent-deep);
-  font-family: var(--font-en);
-  font-size: 0.82rem;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  line-height: 1.25;
+  background: #8f4f2c;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 1px rgba(181, 106, 63, 0.25);
+  transform: translate(-50%, -50%);
+  animation: cycle-spine-dot 5.5s linear infinite;
+}
+
+@keyframes cycle-spine-dot {
+  from {
+    top: 0;
+  }
+  to {
+    top: 100%;
+  }
+}
+
+.cycle-hub {
+  display: none;
+}
+
+.cycle-loop-track {
+  fill: none;
+  stroke: rgba(181, 106, 63, 0.2);
+  stroke-width: 2;
+  stroke-dasharray: 7 6;
+  vector-effect: non-scaling-stroke;
+}
+
+.cycle-loop-flow {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-dasharray: 48 200;
+  animation: cycle-flow 5.5s linear infinite;
+  vector-effect: non-scaling-stroke;
 }
 
 .cycle-card {
@@ -916,6 +959,10 @@ a {
     height: 100%;
   }
 
+  .cycle-spine {
+    display: none;
+  }
+
   .cycle-loop {
     display: block;
     position: absolute;
@@ -929,25 +976,10 @@ a {
     aspect-ratio: unset;
   }
 
-  .cycle-loop-track {
-    fill: none;
-    stroke: rgba(181, 106, 63, 0.2);
-    stroke-width: 2;
-    stroke-dasharray: 7 6;
-    vector-effect: non-scaling-stroke;
-  }
-
-  .cycle-loop-flow {
-    fill: none;
-    stroke: var(--accent);
-    stroke-width: 3;
-    stroke-linecap: round;
-    stroke-dasharray: 48 200;
-    animation: cycle-flow 5.5s linear infinite;
-    vector-effect: non-scaling-stroke;
-  }
-
   .cycle-hub {
+    display: grid;
+    place-items: center;
+    text-align: center;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -956,7 +988,19 @@ a {
     height: 10.8rem;
     margin: 0;
     z-index: 2;
+    border-radius: 50%;
+    background:
+      radial-gradient(circle at 32% 28%, #fff, #f8ece3 58%, #f0d8c6 100%);
+    border: 3px solid rgba(181, 106, 63, 0.28);
+    box-shadow:
+      0 8px 24px rgba(143, 79, 44, 0.12),
+      0 0 0 10px rgba(255, 255, 255, 0.55);
+    color: var(--accent-deep);
+    font-family: var(--font-en);
     font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    line-height: 1.25;
   }
 
   .cycle-card-tl { grid-column: 1; grid-row: 1; }
@@ -2205,7 +2249,8 @@ body.contact-open {
     scroll-behavior: auto;
   }
 
-  .cycle-loop-dot {
+  .cycle-loop-dot,
+  .cycle-spine-dot {
     display: none !important;
   }
 
@@ -2213,7 +2258,8 @@ body.contact-open {
   .hero-photo,
   .scroll-line,
   .cycle-loop-flow,
-  .cycle-loop-dot {
+  .cycle-loop-dot,
+  .cycle-spine-dot {
     animation: none !important;
     transition: none !important;
     opacity: 1 !important;
