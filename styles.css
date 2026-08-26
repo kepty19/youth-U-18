@@ -909,18 +909,24 @@ a {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 5.2rem 6rem;
-    min-height: 34rem;
+    align-items: stretch;
+  }
+
+  .cycle-card {
+    height: 100%;
   }
 
   .cycle-loop {
     display: block;
     position: absolute;
-    inset: 18% 16%;
-    width: auto;
-    height: auto;
+    left: 18%;
+    top: 16%;
+    width: 64%;
+    height: 68%;
     z-index: 0;
     overflow: visible;
     pointer-events: none;
+    aspect-ratio: unset;
   }
 
   .cycle-loop-track {
