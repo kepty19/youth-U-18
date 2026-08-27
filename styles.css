@@ -1443,6 +1443,10 @@ a {
   color: var(--accent-deep);
 }
 
+.matrix-table .cell-center .cell-lead {
+  margin-bottom: 0;
+}
+
 .matrix-table .cell-note {
   display: block;
   margin-top: 0.2rem;
