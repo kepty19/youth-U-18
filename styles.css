@@ -538,6 +538,17 @@ a {
   line-height: 1.5;
 }
 
+.split-panel-head {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 0.9rem;
+}
+
+.split-panel-head h3 {
+  margin-bottom: 0;
+}
+
 .split-panel.highlight h3 {
   color: var(--accent-deep);
 }
@@ -607,6 +618,12 @@ a {
   font-weight: 700;
   letter-spacing: 0.04em;
   line-height: 1.4;
+}
+
+.solution-tag-light {
+  font-weight: 500;
+  background: #f7eee7;
+  color: var(--accent);
 }
 
 .solution-block h3 {
