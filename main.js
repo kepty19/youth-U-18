@@ -1,5 +1,6 @@
 (() => {
   const header = document.getElementById("site-header");
+  const hero = document.querySelector(".hero");
   const reveals = document.querySelectorAll("[data-reveal]");
 
   const onScroll = () => {
@@ -9,6 +10,16 @@
 
   onScroll();
   window.addEventListener("scroll", onScroll, { passive: true });
+
+  if (header && hero && "IntersectionObserver" in window) {
+    const heroIo = new IntersectionObserver(
+      ([entry]) => {
+        header.classList.toggle("is-hero-hidden", !entry.isIntersecting);
+      },
+      { threshold: 0.12 }
+    );
+    heroIo.observe(hero);
+  }
 
   if ("IntersectionObserver" in window) {
     const io = new IntersectionObserver(
