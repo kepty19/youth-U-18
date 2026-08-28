@@ -588,13 +588,26 @@ a {
   }
 }
 
+.solution-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 .solution-tag {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.32rem 0.85rem;
+  margin-bottom: 0.75rem;
+  border-radius: 999px;
+  background: var(--accent-deep);
+  color: #fff;
   font-family: var(--font-ui);
-  font-size: 0.72rem;
-  letter-spacing: 0.12em;
-  color: var(--accent);
-  margin-bottom: 0.6rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.4;
+  box-shadow: 0 2px 8px rgba(143, 79, 44, 0.22);
 }
 
 .solution-block h3 {
