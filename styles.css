@@ -412,20 +412,79 @@ a {
   max-width: 42rem;
 }
 
-.closing-line {
-  margin-top: 2.5rem;
-  font-size: 1.08rem;
-  font-weight: 600;
-  line-height: 1.9;
-  max-width: 40rem;
-}
-
 .prose:has(.prose-inline) {
   max-width: none;
 }
 
-.closing-line.prose-inline {
-  max-width: none;
+.closing-insight {
+  margin-top: 1.5rem;
+  padding: 1.35rem 1.4rem 1.45rem;
+  background: #fff;
+  border: 1px solid rgba(181, 106, 63, 0.18);
+  border-left: 3px solid var(--accent);
+  box-shadow: 0 8px 22px rgba(89, 48, 24, 0.06);
+}
+
+.closing-pills {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.55rem 0.65rem;
+  margin-bottom: 0.95rem;
+}
+
+.closing-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.38rem 0.9rem 0.38rem 0.42rem;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #fff8f3, #f8e6d8);
+  border: 1px solid rgba(181, 106, 63, 0.28);
+  color: var(--accent-deep);
+  font-size: 0.92rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.closing-pill-icon {
+  width: 1.7rem;
+  height: 1.7rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #fff;
+  color: var(--accent);
+  box-shadow: 0 1px 3px rgba(89, 48, 24, 0.08);
+}
+
+.closing-pill-icon svg {
+  width: 0.95rem;
+  height: 0.95rem;
+  display: block;
+}
+
+.closing-join {
+  color: var(--muted);
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.closing-insight p {
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.9;
+  color: var(--ink);
+}
+
+@media (min-width: 800px) {
+  .closing-insight {
+    padding: 1.5rem 1.7rem 1.6rem;
+  }
+
+  .closing-insight p {
+    font-size: 1.08rem;
+  }
 }
 
 /* Manifesto */
