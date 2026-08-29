@@ -1900,17 +1900,7 @@ a {
   font-weight: 500;
   color: var(--muted);
   letter-spacing: 0.04em;
-  margin-bottom: 0.35rem;
-}
-
-.founder-name {
-  font-family: var(--font-display);
-  font-size: clamp(1.7rem, 3.6vw, 2.15rem);
-  font-weight: 700;
-  line-height: 1.35;
-  letter-spacing: 0.04em;
-  color: var(--ink);
-  margin: 0 0 0.45rem;
+  margin-bottom: 0.7rem;
 }
 
 .founder-role {
@@ -1918,6 +1908,17 @@ a {
   font-weight: 600;
   color: var(--accent-deep);
   letter-spacing: 0.08em;
+  margin-bottom: 0.3rem;
+}
+
+.founder-name {
+  font-family: var(--font-display);
+  font-size: clamp(1.45rem, 3vw, 1.85rem);
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+  margin: 0;
 }
 
 .founder-bio {
