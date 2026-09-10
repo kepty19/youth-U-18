@@ -848,47 +848,45 @@
           </div>
 
           <div class="plans-scroll reveal" data-reveal>
-            <table class="plans-matrix" aria-label="料金プラン">
-              <thead>
-                <tr>
-                  <th class="plans-corner" aria-hidden="true"></th>
-                  <th class="plans-head" scope="col">基礎強化3ヶ月プログラム</th>
-                  <th class="plans-head" scope="col">継続利用</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th class="plans-label" scope="row">提供内容</th>
-                  <td class="plans-cell plans-ours" data-label="基礎強化">
-                    <ul class="plans-list">
-                      <li>英語コーチングプログラム</li>
-                      <li>最新アプリ教材</li>
-                      <li>専属メンター(現役/元プロ選手)との定例</li>
-                      <li>オンライン英会話</li>
-                    </ul>
-                  </td>
-                  <td class="plans-cell plans-cell-center" data-label="継続利用">
-                    <ul class="plans-list">
-                      <li>最新アプリ教材</li>
-                      <li>オンライン英会話</li>
-                    </ul>
-                  </td>
-                </tr>
-                <tr>
-                  <th class="plans-label" scope="row">価格</th>
-                  <td class="plans-cell plans-price plans-ours" data-label="基礎強化">
-                    <div class="plans-price-stack">
-                      <span class="plans-price-main">月額 14,000円</span>
-                    </div>
-                  </td>
-                  <td class="plans-cell plans-price" data-label="継続利用">
-                    <div class="plans-price-stack">
-                      <span class="plans-price-main">月額 9,800円</span>
-                    </div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="plans-matrix" role="table" aria-label="料金プラン">
+              <div class="plans-corner" role="presentation"></div>
+              <div class="plans-head plans-head-primary" role="columnheader">基礎強化3ヶ月プログラム</div>
+              <div class="plans-head plans-head-continue" role="columnheader">継続利用</div>
+              <div class="plans-label plans-label-body" role="rowheader">提供内容</div>
+              <div class="plans-label plans-label-price" role="rowheader">価格</div>
+
+              <article class="plans-card plans-card-primary">
+                <h3 class="plans-card-title">基礎強化3ヶ月プログラム</h3>
+                <div class="plans-cell plans-cell-body" data-label="提供内容" role="cell">
+                  <ul class="plans-list">
+                    <li>英語コーチングプログラム</li>
+                    <li>最新アプリ教材</li>
+                    <li>専属メンター(現役/元プロ選手)との定例</li>
+                    <li>オンライン英会話</li>
+                  </ul>
+                </div>
+                <div class="plans-cell plans-price" data-label="価格" role="cell">
+                  <div class="plans-price-stack">
+                    <span class="plans-price-main">月額 14,000円</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="plans-card plans-card-continue">
+                <h3 class="plans-card-title">継続利用</h3>
+                <div class="plans-cell plans-cell-body plans-cell-center" data-label="提供内容" role="cell">
+                  <ul class="plans-list">
+                    <li>最新アプリ教材</li>
+                    <li>オンライン英会話</li>
+                  </ul>
+                </div>
+                <div class="plans-cell plans-price" data-label="価格" role="cell">
+                  <div class="plans-price-stack">
+                    <span class="plans-price-main">月額 9,800円</span>
+                  </div>
+                </div>
+              </article>
+            </div>
           </div>
 
           <p class="plans-footnote reveal" data-reveal>
