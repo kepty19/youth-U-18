@@ -1729,9 +1729,28 @@ a {
 }
 
 .plans-head {
-  font-size: clamp(0.88rem, 1.6vw, 1.02rem);
-  letter-spacing: 0.04em;
-  padding: 1rem 0.85rem;
+  flex-direction: column;
+  gap: 0.28rem;
+  font-size: clamp(0.82rem, 1.45vw, 0.96rem);
+  letter-spacing: 0.02em;
+  padding: 0.9rem 0.75rem;
+  line-height: 1.45;
+}
+
+.plans-phase {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  line-height: 1.2;
+  color: var(--accent-deep);
+}
+
+.plans-phase-name {
+  display: block;
+  font-size: inherit;
+  font-weight: 700;
+  letter-spacing: 0.02em;
   line-height: 1.45;
 }
 
@@ -1865,15 +1884,18 @@ a {
   }
 
   .plans-card-title {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.2rem;
     margin: 0;
-    padding: 0.65rem 0.95rem;
+    padding: 0.7rem 0.95rem;
     background: #ebe3da;
     color: var(--ink);
     font-family: var(--font-jp);
-    font-size: 0.76rem;
+    font-size: 0.82rem;
     font-weight: 700;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.02em;
     line-height: 1.5;
     text-align: left;
     border-bottom: 1px solid rgba(89, 48, 24, 0.12);
